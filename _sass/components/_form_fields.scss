@@ -28,7 +28,7 @@ select {
 }
 
 input {
-    
+
     &.short {
         width: 50px;
         font: 12px $font-stack;
@@ -58,20 +58,34 @@ textarea {
     display: inline-block;
     border-radius: 4px;
 
-    .segmented-control__option {
+    &__option {
         display: inline-block;
         float: $left;
-    }
 
-    .segmented-control__option__button {
-        display: block;
-        padding: 3px 8px;
-        margin: 0;
-        border-#{$left}: 1px solid $border-2;
-        border-#{$right}: 1px solid transparent;
-        position: relative;
-        z-index: 10;
-        cursor: pointer;
+        &__button {
+            display: block;
+            padding: 3px 8px;
+            margin: 0;
+            border-#{$left}: 1px solid $border-2;
+            border-#{$right}: 1px solid transparent;
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        &__input {
+            position: absolute;
+            visibility: hidden;
+
+            &:checked + .segmented-control__option__button {
+                background: $primary-color;
+                color: $invert-font-color;
+                margin: -1px;
+                padding: 3px 9px;
+                border: 1px solid $primary-color;
+                z-index: 15;
+            }
+        }
     }
 
     :first-child .segmented-control__option__button {
@@ -82,53 +96,40 @@ textarea {
     :last-child .segmented-control__option__button {
         border-radius: corner-values(0 4px 4px 0);
     }
-
-    .segmented-control__option__input {
-        position: absolute;
-        visibility: hidden;
-    }
-
-    .segmented-control__option__input:checked + .segmented-control__option__button {
-        background: $primary-color;
-        color: $invert-font-color;
-        margin: -1px;
-        border: 1px solid $primary-color;
-        z-index: 15;
-    }
 }
 
 .select-control {
     font-size: 0.8em;
 
-    .select-control__option {
+    &__option {
         display: block;
         margin: side-values(0 0 5px 0);
         padding: 0;
-    }
 
-    .select-control__option__button {
-        display: block;
-        padding: 3px 8px;
-        margin: side-values(5px 10px 0 0);
-        background: $background-1;
-        cursor: pointer;
-        border-radius: 4px;
+        &__button {
+            display: block;
+            padding: 3px 8px;
+            margin: side-values(5px 10px 0 0);
+            background: $background-1;
+            cursor: pointer;
+            border-radius: 4px;
 
-        &.icon:before {
-            @include black-transparency(0.4);
+            &.icon:before {
+                @include black-transparency(0.4);
+            }
         }
-    }
 
-    .select-control__option__input {
-        position: absolute;
-        visibility: hidden;
-    }
+        &__input {
+            position: absolute;
+            visibility: hidden;
 
-    .select-control__option__input:checked + .select-control__option__button {
-        background: $background-4;
+            &:checked + .select-control__option__button {
+                background: $background-4;
 
-        &.icon:before {
-            @include black-transparency(0.6);
+                &.icon:before {
+                    @include black-transparency(0.6);
+                }
+            }
         }
     }
 }

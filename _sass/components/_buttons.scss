@@ -11,7 +11,13 @@ a.button {
     line-height: 26px;
     border-radius: 4px;
 
-    &:hover {
+    &:link,
+    &:visited {
+        color: $invert-font-color;
+    }
+
+    &:hover,
+    &:active {
         background: $secondary-color;
         border-color: $secondary-color;
         text-decoration: none;
@@ -23,7 +29,13 @@ a.button {
         background: $background-default;
         color: $primary-color;
 
-        &:hover {
+        &:link,
+        &:visited {
+            color: $primary-color;
+        }
+
+        &:hover,
+        &:active {
             color: $secondary-color;
         }
     }
@@ -39,7 +51,7 @@ a.button {
 
         &.button--half-width {
             padding: 8px 10px;
-            width: 49%;            
+            width: 49%;
             float: $left;
             box-sizing: border-box;
 
