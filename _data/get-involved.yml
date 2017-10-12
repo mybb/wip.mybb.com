@@ -1,0 +1,12 @@
+- url: get-involved/development
+  title: Development
+  icon: code
+- url: get-involved/resources
+  title: Resources
+  icon: book
+- url: get-involved/support
+  title: Support
+  icon: question
+- url: get-involved/security
+  title: Security Research
+  icon: bug

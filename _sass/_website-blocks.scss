@@ -1,0 +1,179 @@
+.block {
+
+	h1 {
+		color: $primary-color;
+		font-weight: 600;
+		margin: 0 0 5px 0;
+	}
+
+	h2 {
+		color: $secondary-color;
+		font-size: 1em;
+		font-weight: normal;
+		margin: 0 0 5px 0;
+	}
+
+	p {
+		margin: 0 0 20px 0;
+	}
+
+	.block__heading {
+		margin-bottom: 10px;
+
+		.block__heading__title {
+			color: $primary-color;
+			font-weight: 600;
+			margin-bottom: 2px;
+			padding: 0;
+		}
+
+		.block__heading__subtitle {
+			color: $secondary-color;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.block__container {
+		// padding: 8px;
+
+		p {
+			margin: 0 0 15px 0;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+
+	.block__action {
+		margin-top: -10px;
+		@include icon(16px, currentColor, 4px, 0);
+
+		.button {
+			margin: 0;
+		}
+	}
+
+	.github-buttons {
+		float: $right;
+		margin-top: 2px;
+	}
+}
+
+.section-menu {
+
+	&.section-menu--block {
+		float: none;
+		width: auto;
+		margin: 0 0 20px 0;
+		font-size: 1.1em;
+	}
+
+	.section-menu__links {
+
+		.section-menu__links__item {
+
+			&,
+			&:nth-child(odd),
+			&:nth-child(even) {
+				float: none;
+				width: 100%;
+				margin-#{$left}: 0;
+				margin-#{$right}: 0;
+			}
+
+			@include icon(18px, $primary-color, 8px, 2px);
+
+			&:hover, &:active, &.section-menu__links__item--active {
+				@include icon-fill($invert-font-color);
+			}
+		}
+	}
+}
+
+.sidebar__nav {
+
+	.sidebar__nav__links {
+		list-style: none;
+		margin: -5px -6px 0 -6px;
+		padding: 0;
+
+		.sidebar__nav__links__item {
+			margin: 0;
+			padding: 0;
+			font-size: 1.1em;
+			border-bottom: 1px solid $border-3;
+
+			.sidebar__nav__links__item__link {
+				padding: 4px 6px;
+				display: block;
+			}
+
+			&.sidebar__nav__links__item--active {
+
+				.sidebar__nav__links__item__link {
+					color: $secondary-color;
+					font-weight: 700;
+				}
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+.team-list {
+	border-top: 2px solid $border-1;
+	margin-bottom: 30px;
+
+	.team-list__member {
+		padding: 8px 12px;
+		border-bottom: 1px solid $border-1;
+
+		@include bp-large {
+			@include clearfix;
+		}
+
+		.team-list__member__name {
+			color: $font-color;
+			font-weight: 700;
+			margin: 0;
+			padding: 0;
+			font-size: 0.9em;
+
+			@include bp-large {
+				float: $left;
+				width: 33%;
+			}
+		}
+
+		&.team-list__member--lead {
+
+			.team-list__member__name {
+				color: $secondary-color;
+			}
+		}
+
+		.team-list__member__profile,
+		.team-list__member__website {
+			display: inline-block;
+			font-size: 0.8em;
+			margin: side-values(0 10px 0 0);
+			@include icon(14px, $alt-font-color-2, 4px);
+
+			@include bp-large {
+				float: $left;
+				width: 33%;
+				margin: 0;
+			}
+		}
+
+		.team-list__member__profile__link,
+		.team-list__member__website__link {
+			color: $alt-font-color-1;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+- username: "Euan T"
+  uid: 21114
+  website: "http://mybbstuff.com"
+  twitter: "euantor"
+  github: "euantorano"
+  keybase: "euantorano"
+  pgp_fingerprint: "3705 B534 4400 C2AC 5C1E FFB8 8DCD 87C3 275A 7B24"
+  pgp_link: "https://keybase.io/euantorano/key.asc"
+  lead: true
+- username: "Justin"
+  uid: 1830
+  name: "Justin Soltesz"
+  github: "justinsoltesz"
+  twitter: "justinsoltesz"
+  website: "http://jsoltesz.com"
+- username: "Omar G."
+  uid: 25096
+  name: "Omar Gonzalez"
+  github: "Sama34"
+  website: "http://omarg.me"
+- username: "Starpaul20"
+  uid: 4041
+  name: "Paul Bender"
+  github: "PaulBender"
+  website: "http://galaxiesrealm.com"
+- username: "Tomm M"
+  uid: 14621
+  name: "Tom Moore"
+  github: "tommm"
+  twitter: "mooseypx"
+- username: "Eric J."
+  uid: 13376
+  github: "Eric-Jackson"
+  website: "http://digitalrelativity.com"
+- username: "Josh H."
+  uid: 43697
+  name: "Josh Harmon"
+  github: "JoshHarmon"
+  website: "https://joshharmon.me"
+  keybase: "joshharmon"
+  pgp_fingerprint: "9163 CDB6 2513 5205 28E0 5EF5 2FF1 92C4 5261 6DF0"
+  pgp_link: "https://keybase.io/joshharmon/key.asc"

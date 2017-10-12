@@ -1,0 +1,306 @@
+//  move to MyBB 2 CSS at some point
+.button {
+
+	@include icon(24px, $invert-font-color, 10px);
+
+	&.button--secondary {
+		@include icon(24px, $primary-color, 10px);
+
+		&:hover, &:active {
+			@include icon-fill($secondary-color);
+		}
+	}
+
+	&.button--medium {
+		font-size: 1.2em;
+		padding: 8px 16px;
+	}
+
+	&.button--big {
+		font-size: 1.3em;
+		padding: 12px 18px;
+	}
+
+	&.button--dark {
+		background: $dark-background-2;
+		border-color: $dark-background-3;
+
+		&:hover {
+			background: $dark-background-2;
+			border-color: $dark-background-3;
+			color: $secondary-color;
+		}
+	}
+}
+
+
+.main--home {
+	line-height: 1.4;
+
+	.main-feature {
+
+		.wrapper {
+			padding: 20px 10px 5px 10px;
+			border-bottom: none;
+			position: relative;
+
+			@include bp-medium {
+				padding: 20px 260px 5px 20px s;
+			}
+		}
+
+		.main-feature__page-title {
+			font-size: 2.4em;
+
+			@include bp-medium {
+				font-size: 3em;
+				max-width: 500px;
+			}
+		}
+
+		.main-feature__description {
+			font-size: 1.4em;
+
+			@include bp-medium {
+				max-width: 600px;
+				font-size: 1.6em;
+			}
+
+			strong {
+				font-weight: 400;
+			}
+		}
+
+		.main-feature__buttons {
+			margin: side-values(30px 0 0 -5px);
+		}
+	}
+
+	.bolt {
+		display: none;
+
+		@include bp-medium {
+			display: inline-block;
+			right: 0;
+			margin: -40px 0 0 50px;
+			position: absolute;
+			bottom: -80px;
+
+			.bolt__img {
+				object-fit: contain;
+				height: 440px;
+			}
+		}
+	}
+
+	@include bp-medium-max {
+
+		.button {
+			display: block;
+			text-align: center;
+			margin: 0 0 20px 0;
+		}
+	}
+}
+
+.features-block {
+	background: $background-2;
+	@include clearfix();
+
+	.wrapper {
+		padding: 40px 10px;
+
+		@include bp-medium {
+			padding: 40px 20px;
+		}
+	}
+
+	.features-block__title {
+		font-weight: 300;
+		font-size: 1.8em;
+		margin: 0 0 30px 0;
+		text-align: center;
+
+		@include bp-medium {
+			font-size: 2.4em;
+		}
+	}
+
+	.features-block__container {
+		@include clearfix;
+	}
+
+	.features-block__item {
+		box-sizing: border-box;
+		padding-bottom: 30px;
+
+		@include bp-medium {
+			width: 50%;
+			float: $left;
+
+			&:nth-child(odd) {
+				padding-#{$right}: 20px;
+			}
+
+			&:nth-child(even) {
+				padding-#{$left}: 20px;
+			}
+		}
+
+		.features-block__item__link {
+			@include icon(20px, currentColor, 10px);
+
+			&:hover, &:active {
+				text-decoration: none;
+			}
+		}
+
+		.features-block__item__title {
+			font-size: 1.1em;
+			display: block;
+			margin-bottom: 10px;
+			font-weight: 400;
+
+			@include bp-medium {
+				font-size: 1.3em;
+			}
+
+			strong {
+				font-weight: 600;
+			}
+		}
+
+		.features-block__item__image {
+			display: block;
+
+			img {
+				width: 100%;
+				border-radius: 5px;
+			}
+		}
+	}
+
+	.features-block__buttons {
+		margin-top: 10px;
+		text-align: center;
+	}
+}
+
+.free-tastes-good-block {
+
+	.wrapper {
+		padding: 30px 10px 10px;
+
+		@include bp-medium {
+			padding: 30px 20px 10px;
+		}
+	}
+
+	.free-tastes-good-block__title {
+		font-weight: 300;
+		font-size: 1.8em;
+		color: $secondary-color;
+		margin: 0;
+
+		@include bp-medium {
+			font-size: 2.4em;
+		}
+	}
+
+	.free-tastes-good-block__description {
+		font-weight: 300;
+		font-size: 1.2em;
+
+		@include bp-medium {
+			font-size: 1.6em;
+		}
+	}
+}
+
+.about-block {
+	background: $dark-background-2;
+	color: $invert-font-color;
+
+	.wrapper {
+		padding: 20px 10px;
+
+		@include bp-medium {
+			padding: 20px;
+		}
+	}
+
+	.about-block__title {
+		font-weight: 300;
+		font-size: 1.2em;
+		margin: 0 0 15px 0;
+		color: $alt-font-color-3;
+
+		@include bp-medium {
+			font-size: 1.6em;
+		}
+	}
+
+	.about-block__links {
+		list-style: none;
+		margin: 0 0 5px 0;
+		padding: 0;
+
+		.about-block__links__item {
+			display: inline-block;
+			margin-#{$right}: 20px;
+
+			.about-block__links__item__link {
+				color: $invert-font-color;
+				@include icon(16px, $alt-font-color-3, 6px);
+
+				&:hover, &:active {
+
+				}
+			}
+		}
+	}
+}
+
+.follow-block {
+
+	.wrapper {
+		padding: 30px 10px 10px 10px;
+
+		@include bp-medium {
+			padding: 30px 20px 10px 20px;
+		}
+	}
+
+	.follow-block__title {
+		font-weight: 300;
+		font-size: 1.2em;
+		color: $alt-font-color-1;
+		margin: 0;
+
+		@include bp-medium {
+			font-size: 1.6em;
+			float: $left;
+		}
+	}
+
+
+	.social-buttons {
+		margin-top: 20px;
+
+		@include bp-medium {
+			border-#{$left}: 1px solid $border-1;
+			padding: side-values(8px 0 4px 20px);
+			margin: side-values(4px 0 0 20px);
+			float: $left;
+
+			.social-buttons__button {
+				float: $left;
+				display: inline-block;
+
+				&.social-buttons__button--twitter {
+					margin-#{$right}: 12px;
+				}
+			}
+		}
+	}
+}

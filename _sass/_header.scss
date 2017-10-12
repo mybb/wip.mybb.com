@@ -1,0 +1,183 @@
+.header {
+    background: $dark-background-1;
+    border-bottom: 4px solid $primary-color;
+    box-shadow: 0 -2px 5px $dark-background-1;
+    display: flex;
+
+    .site-name {
+        float: $left;
+        margin: side-values(15px 2% 10px 20px);
+
+        #logo {
+            background-image: url("../images/logo_mobile.png");
+            background-repeat: no-repeat;
+            background-position: top $left;
+            width: 137px;
+            height: 39px;
+            display: block;
+
+            // svg {
+            //     width: 137px;
+            //     height: 39px;
+            //
+            //     .mybb-logo {
+            //         stroke: $invert-font-color;
+            //         stroke-width: 2px;
+            //     }
+            // }
+        }
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .menu-button {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        @include icon(30px, $invert-font-color);
+
+        @include bp-medium {
+            display: none;
+        }
+    }
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 2) {
+
+    .header .site-name #logo {
+        background-image: url("../images/logo_mobile@2x.png");
+        background-size: 137px 39px;
+    }
+}
+
+.section--home {
+    @include section-color($primary-color);
+}
+
+.section--features {
+    @include section-color($features-color);
+}
+
+.section--download {
+    @include section-color($download-color);
+}
+
+.section--community {
+    @include section-color($community-color);
+}
+
+.section--get-involved {
+    @include section-color($get-involved-color);
+}
+
+.section--extend {
+    @include section-color($extend-color);
+}
+
+.section--docs {
+    @include section-color($docs-color);
+}
+
+.section--blog {
+    @include section-color($blog-color);
+}
+
+// @media all and (-webkit-min-device-pixel-ratio: 2) and (min-width: $bp-medium) {
+
+//     .header .site-name #logo {
+//         background-image: url("../images/logo@2x.png");
+//         background-size: 188px 55px;
+//     }
+// }
+
+.main-menu {
+    margin-bottom: -4px;
+
+    @include bp-medium-max {
+        margin-top: 60px;
+    }
+
+    .main-menu__links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+
+        @include bp-medium-max {
+            // flex-direction: row;
+            margin: 0 -25px;
+            flex-wrap: wrap;
+            background: $dark-background-2;
+        }
+
+        .main-menu__links__gap {
+            flex-grow: 2;
+
+            @include bp-medium-max {
+                display: none;
+            }
+        }
+
+        .main-menu__links__item {
+            flex-grow: 1;
+            border-bottom: 4px solid $primary-color;
+
+            @include bp-medium-max {
+                width: 50%;
+            }
+
+            .main-menu__links__item__link {
+                display: block;
+                margin: 0;
+                text-align: center;
+                font-size: 0.8em;
+                padding: 19px 0;
+                color: $invert-font-color;
+
+                @include bp-medium-max {
+                    padding: 10px 0;
+                }
+
+                @include bp-custom(900px) {
+                    font-size: 0.9em;
+                }
+            }
+        }
+
+        .main-menu__links__item--home {
+            @include menu-color($primary-color);
+        }
+
+        .main-menu__links__item--features {
+            @include menu-color($features-color);
+        }
+
+        .main-menu__links__item--download {
+            @include menu-color($download-color);
+        }
+
+        .main-menu__links__item--community {
+            @include menu-color($community-color);
+        }
+
+        .main-menu__links__item--get-involved {
+            @include menu-color($get-involved-color);
+        }
+
+        .main-menu__links__item--extend {
+            @include menu-color($extend-color);
+        }
+
+        .main-menu__links__item--docs {
+            @include menu-color($docs-color);
+        }
+
+        .main-menu__links__item--blog {
+            @include menu-color($blog-color);
+        }
+
+    }
+}

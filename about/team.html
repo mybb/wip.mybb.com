@@ -1,0 +1,37 @@
+---
+layout: default
+section: home
+title: About the Team
+description: Take a closer look at the people who make MyBB possible.
+meta_description: Take a closer look at the people who make MyBB possible.
+---
+
+<aside class="page-sidebar">
+	{% include section_nav.html section='about' %}
+
+	<section class="block">
+		<h1 class="block__heading">Joining the MyBB Team</h1>
+		<div class="block__container">
+			<p>Interested in joining the MyBB team? It all starts by getting involved with the community such as through development or support.</p>
+			<p class="block__action"><a href="{{ site.baseurl }}/get-involved/" class="button icon icon--after fa-arrow-right">Get Involved</a></p>
+		</div>
+	</section>
+</aside>
+
+<div class="page-content page-content--sidebar">
+	<section class="block">
+		<p>The MyBB team is composed of volunteers committed to developing, supporting, and managing the MyBB forum software project. They have a single mission: to make the best forum software possible. While the MyBB team is divided into separate groups below, these groups represent only primary tasks. Each member of the MyBB team is charged with pushing the MyBB project forward in any way they see fit.</p>
+	</section>
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">The MyBB Team</h1>
+		</header>
+		<div class="team-cards">
+			{% include team_cards.html team_name="Management" team_data=site.data.team_management %}
+			{% include team_cards.html team_name="Support" team_data=site.data.team_support %}
+			{% include team_cards.html team_name="Development" team_data=site.data.team_development %}
+			{% include team_cards.html team_name="Quality Assurance" team_data=site.data.team_quality_assurance %}
+			{% include team_cards.html team_name="Community" team_data=site.data.team_community %}
+		</div>
+	</section>
+</div>
