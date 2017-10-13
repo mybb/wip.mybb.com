@@ -1,15 +1,21 @@
 .block {
+	margin-bottom: 40px;
 
 	h1 {
-		color: $primary-color;
+		// color: $primary-color;
+		color: $font-color;
 		font-weight: 600;
 		margin: 0 0 5px 0;
+		font-size: 1.5em;
+		font-family: $alt-font-stack;
 	}
 
 	h2 {
-		color: $secondary-color;
-		font-size: 1em;
+		// color: $secondary-color;
+		color: $alt-font-color-4;
+		font-size: 1.1em;
 		font-weight: normal;
+		font-family: $alt-font-stack;
 		margin: 0 0 5px 0;
 	}
 
@@ -21,14 +27,18 @@
 		margin-bottom: 10px;
 
 		.block__heading__title {
-			color: $primary-color;
+			// color: $primary-color;
+			color: $font-color;
 			font-weight: 600;
 			margin-bottom: 2px;
 			padding: 0;
 		}
 
 		.block__heading__subtitle {
-			color: $secondary-color;
+			// color: $secondary-color;
+			color: $alt-font-color-4;
+			font-size: 1.1em;
+			line-height: 40px;
 			margin: 0;
 			padding: 0;
 		}

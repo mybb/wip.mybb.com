@@ -14,13 +14,16 @@
     <meta name="description" content="{{ page.meta_description }}" />
     {% endif %}
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,600i|Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
 </head>
 <body{% if page.section %} class="section section--{{ page.section }}"{% endif %}>
     <header class="header">
         <div class="wrapper">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/" id="logo"><span class="visually-hidden">{{ page.title }} - {{ site.name }}</span></a></h1>
+            <h1 class="site-name"><a href="{{ site.baseurl }}/" id="logo">
+                <span class="site-name__logo">{% include logo-knockout.svg %}</span>
+                <span class="site-name__text">{{ site.name }}</span>
+            </a></h1>
             <span class="menu-button"><span class="icon"><!-- menu icon --></span></span>
             <nav class="main-menu">
                 <ul class="main-menu__links">

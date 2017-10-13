@@ -54,15 +54,14 @@
 
 			@include bp-medium {
 				font-size: 3em;
-				max-width: 500px;
 			}
 		}
 
 		.main-feature__description {
 			font-size: 1.4em;
+			font-weight: 300;
 
 			@include bp-medium {
-				max-width: 600px;
 				font-size: 1.6em;
 			}
 
@@ -73,23 +72,6 @@
 
 		.main-feature__buttons {
 			margin: side-values(30px 0 0 -5px);
-		}
-	}
-
-	.bolt {
-		display: none;
-
-		@include bp-medium {
-			display: inline-block;
-			right: 0;
-			margin: -40px 0 0 50px;
-			position: absolute;
-			bottom: -80px;
-
-			.bolt__img {
-				object-fit: contain;
-				height: 440px;
-			}
 		}
 	}
 
@@ -116,10 +98,12 @@
 	}
 
 	.features-block__title {
-		font-weight: 300;
+		font-weight: 400;
+		font-family: $alt-font-stack;
 		font-size: 1.8em;
 		margin: 0 0 30px 0;
 		text-align: center;
+		color: $alt-font-color-4;
 
 		@include bp-medium {
 			font-size: 2.4em;
@@ -166,7 +150,7 @@
 			}
 
 			strong {
-				font-weight: 600;
+				font-weight: 400;
 			}
 		}
 
@@ -199,7 +183,9 @@
 	.free-tastes-good-block__title {
 		font-weight: 300;
 		font-size: 1.8em;
-		color: $secondary-color;
+		font-family: $alt-font-stack;
+		// color: $secondary-color;
+		text-align: center;
 		margin: 0;
 
 		@include bp-medium {

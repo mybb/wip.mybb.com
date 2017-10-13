@@ -1,6 +1,7 @@
 .header {
     background: $dark-background-1;
     border-bottom: 4px solid $primary-color;
+    border-bottom-color: $dark-border-2;
     box-shadow: 0 -2px 5px $dark-background-1;
     display: flex;
 
@@ -9,22 +10,34 @@
         margin: side-values(15px 2% 10px 20px);
 
         #logo {
-            background-image: url("../images/logo_mobile.png");
-            background-repeat: no-repeat;
-            background-position: top $left;
-            width: 137px;
-            height: 39px;
             display: block;
+            text-decoration: none;
 
-            // svg {
-            //     width: 137px;
-            //     height: 39px;
-            //
-            //     .mybb-logo {
-            //         stroke: $invert-font-color;
-            //         stroke-width: 2px;
-            //     }
-            // }
+            svg {
+        		height: 40px;
+        		width: 50px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: -4px;
+        		* {
+        			fill: $alt-font-color-2;
+        		}
+        	}
+
+            .site-name__text {
+                font-family: $alt-font-stack;
+                font-style: italic;
+                color: $invert-font-color;
+
+            }
+
+            &:hover,
+            &:active {
+
+                svg * {
+                        fill: $alt-font-color-3;
+                }
+            }
         }
     }
 
@@ -41,14 +54,6 @@
         @include bp-medium {
             display: none;
         }
-    }
-}
-
-@media all and (-webkit-min-device-pixel-ratio: 2) {
-
-    .header .site-name #logo {
-        background-image: url("../images/logo_mobile@2x.png");
-        background-size: 137px 39px;
     }
 }
 
@@ -83,14 +88,6 @@
 .section--blog {
     @include section-color($blog-color);
 }
-
-// @media all and (-webkit-min-device-pixel-ratio: 2) and (min-width: $bp-medium) {
-
-//     .header .site-name #logo {
-//         background-image: url("../images/logo@2x.png");
-//         background-size: 188px 55px;
-//     }
-// }
 
 .main-menu {
     margin-bottom: -4px;
@@ -142,7 +139,7 @@
                 }
 
                 @include bp-custom(900px) {
-                    font-size: 0.9em;
+                    font-size: 0.95em;
                 }
             }
         }
