@@ -133,6 +133,7 @@
                 font-size: 0.8em;
                 padding: 19px 0;
                 color: $invert-font-color;
+                text-decoration: none;
 
                 @include bp-medium-max {
                     padding: 10px 0;
@@ -141,6 +142,13 @@
                 @include bp-custom(900px) {
                     font-size: 0.95em;
                 }
+            }
+
+
+
+            &:hover,
+            &:active {
+                background: rgba($dark-background-2, 0.6);
             }
         }
 
