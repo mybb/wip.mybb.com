@@ -28,15 +28,15 @@
   name: "Tom Moore"
   github: "tommm"
   twitter: "mooseypx"
-- username: "Eric J."
-  uid: 13376
-  github: "Eric-Jackson"
-  website: "http://digitalrelativity.com"
-- username: "Josh H."
-  uid: 43697
-  name: "Josh Harmon"
-  github: "JoshHarmon"
-  website: "https://joshharmon.me"
-  keybase: "joshharmon"
-  pgp_fingerprint: "9163 CDB6 2513 5205 28E0 5EF5 2FF1 92C4 5261 6DF0"
-  pgp_link: "https://keybase.io/joshharmon/key.asc"
+- username: "Matt"
+  uid: 13556
+  name: "Matt Rogowski"
+  github: "MattRogowski"
+  website: "https://matt.rogow.ski"
+  keybase: "mattrogowski"
+  pgp_fingerprint: "79D4 5D23 079A F220 2312 E4AA 90B3 F250 C1BF 7C81"
+  pgp_link: "https://keybase.io/mattrogowski/key.asc"
+- username: "Wildcard"
+  uid: 55383
+- username: "Matslom"
+  uid: 68440
