@@ -9,6 +9,10 @@ html, button, input, select, textarea {
     text-shadow: none;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     margin: 0;
     font: 16px/26px $font-stack;

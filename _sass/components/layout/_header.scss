@@ -1,0 +1,115 @@
+.header {
+    background: $dark-background-1;
+    display: flex;
+    height: $header-height;
+    
+    &__title {
+        float: $left;
+        height: 100%;
+        margin: 0;
+        
+        .logo {
+            height: 100%;
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .menu-button {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        @include icon(30px, $invert-font-color);
+
+        @include bp-medium {
+            display: none;
+        }
+    }
+}
+
+.main-menu {
+    height: 100%;
+    
+    @include bp-medium-max {
+        margin-top: 60px;
+    }
+
+    &__links {
+        height: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        display: flex;
+        justify-content: flex-end;
+
+        @include bp-medium-max {
+            // flex-direction: row;
+            flex-wrap: wrap;
+            background: $dark-background-2;
+        }
+
+        &__gap {
+            flex-grow: 2;
+
+            @include bp-medium-max {
+                display: none;
+            }
+        }
+
+        &__item {
+            $module: &;
+            flex-grow: 1;
+            transition: background $transition-speed ease;
+
+            @include bp-medium-max {
+                width: 50%;
+            }
+
+            &__link {
+                display: block;
+                margin: 0;
+                text-align: center;
+                font-size: $font-regular;
+                height: 100%;
+                font-weight: 300;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include bp-medium-max {
+                    padding: 10px 0;
+                }
+                
+                &:link, &:visited {
+                    color: $invert-font-color;
+                    text-decoration: none;
+                }
+            }
+
+            &:hover,
+            &:active {
+                background: rgba($dark-background-2, 0.6);
+            }
+            
+            &--active {
+                background: $primary-color;
+                color: $invert-font-color;
+                pointer-events: none;
+                
+                #{$module}__link {
+                    color: inherit;
+                }
+                
+                &:hover {
+                    background: $primary-color;
+                }
+            }
+        }
+
+    }
+}
