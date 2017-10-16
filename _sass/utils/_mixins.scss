@@ -42,20 +42,6 @@
     }
 }
 
-@mixin section-color($color) {
-
-    // .header {
-    //     border-color: $color;
-    // }
-
-    .main-feature {
-
-        .main-feature__page-title {
-            color: $color;
-        }
-    }
-}
-
 @mixin bp-large {
     @media only screen and (min-width: $bp-large) {
         @content;
