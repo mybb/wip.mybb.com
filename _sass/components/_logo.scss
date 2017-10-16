@@ -11,7 +11,7 @@
             display: inline-block;
             vertical-align: middle;
             * {
-                transition: fill .3s ease;
+                transition: fill $transition-speed ease;
             }
         }
     }
