@@ -91,6 +91,37 @@ a.button {
         }
     }
 
+    @include icon(24px, $invert-font-color, 10px);
+
+	&.button--secondary {
+		@include icon(24px, $primary-color, 10px);
+
+		&:hover, &:active {
+			@include icon-fill($secondary-color);
+		}
+	}
+
+	&.button--medium {
+		font-size: 1.2em;
+		padding: 8px 16px;
+	}
+
+	&.button--big {
+		font-size: 1.3em;
+		padding: 12px 18px;
+	}
+
+	&.button--dark {
+		background: $dark-background-2;
+		border-color: $dark-background-3;
+
+		&:hover {
+			background: $dark-background-2;
+			border-color: $dark-background-3;
+			color: $secondary-color;
+		}
+	}
+
     &:hover, &:active {
         outline: none;
     }

@@ -27,23 +27,23 @@
                     {% for item in site.data.features %}
                         {% assign item_url = item | prepend:"/features/" | append:"/" %}
                             {% if item_url == page.url %}
-                                <div class="tourNavigation">
+                                <div class="tour-navigation">
                                     {% if forloop.last %}
                                     {% else %}
                                         {% assign next = forloop.index0 | plus: 1 %}
                                         {% assign next_page = site.data.features[next] | prepend:"/features/" | append:"/" %}
                                         {% assign next_p = site.features | where:"url", next_page | first %}
-                                        <div class="nextFeature">
-                                            <a href="{{ next_page }}" class="next">{{ next_p.title }} &rarr;</a>
+                                        <div class="tour-navigation__item tour-navigation__item--next">
+                                            <a href="{{ next_page }}" class="tour-navigation__item__link tour-navigation__item--next__link">{{ next_p.title }} &rarr;</a>
                                         </div>
                                     {% endif %}
                                     {% if forloop.first %}
                                     {% else %}
-                                    <div class="previousFeature">
+                                    <div class="tour-navigation__item tour-navigation__item--previous">
                                         {% assign previous = forloop.index0 | minus: 1 %}
                                         {% assign previous_page = site.data.features[previous] | prepend:"/features/" | append:"/" %}
                                         {% assign prev_p = site.features | where:"url", previous_page | first %}
-                                        <a href="{{ previous_page }}" class="prev">&larr; {{ prev_p.title }}</a>
+                                        <a href="{{ previous_page }}" class="tour-navigation__item__link tour-navigation__item--previous__link">&larr; {{ prev_p.title }}</a>
                                     </div>
                                     {% endif %}
                                 </div>

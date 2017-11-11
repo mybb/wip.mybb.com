@@ -4,6 +4,9 @@ section: home
 
 title: MyBB - Free and Open Source Forum Software
 meta_description: The official homepage for MyBB, a free and open source PHP forum software.
+
+redirect_from:
+- /features/
 ---
 <article class="main main--home">
 	<header class="main-feature">
@@ -12,77 +15,26 @@ meta_description: The official homepage for MyBB, a free and open source PHP for
 			<p class="main-feature__description">MyBB is the <strong>free and open source</strong> forum software powering thousands of engaging, powerful, and unique communities across the internet.</p>
 			<div class="main-feature__buttons">
 				<a href="{{ site.baseurl }}/download" class="button button--big">{% include icon.html icon='cloud-download' %}Download now</a>
-				<a href="{{ site.baseurl }}/features" class="button button--big button--secondary">{% include icon.html icon='zap' %}Take the feature tour</a>
+				<a href="#features" class="button button--big button--secondary">{% include icon.html icon='zap' %}Take the feature tour</a>
 			</div>
 		</div>
 	</header>
-	<section class="features-block home-block">
+	<section class="features-block home-block" id="features">
 		<div class="wrapper">
-			<h1 class="features-block__title">Intuitive, extensible, and incredibly powerful.</h1>
-			<div class="features-block__container">
-				<div class="features-block__item">
-					<a href="{{ site.baseurl }}/features/#" class="features-block__item__link">
-						<span class="features-block__item__title">{% include icon.html icon='comment' %}Focused on <strong>discussions</strong></span>
-						<span class="features-block__item__image"><img src="{{ site.baseurl }}/images/home/screenshot.png" alt="" /></span>
-					</a>
-				</div>
-				<div class="features-block__item">
-					<a href="{{ site.baseurl }}/features/#" class="features-block__item__link">
-						<span class="features-block__item__title">{% include icon.html icon='pencil' %}<strong>Clean</strong>, simple, and modern</span>
-						<span class="features-block__item__image"><img src="{{ site.baseurl }}/images/home/screenshot.png" alt="" /></span>
-					</a>
-				</div>
-				<div class="features-block__item">
-					<a href="{{ site.baseurl }}/features/#" class="features-block__item__link">
-						<span class="features-block__item__title">{% include icon.html icon='gear' %}Take <strong>control</strong> of your forum</span>
-						<span class="features-block__item__image"><img src="{{ site.baseurl }}/images/home/screenshot.png" alt="" /></span>
-					</a>
-				</div>
-				<div class="features-block__item">
-					<a href="{{ site.baseurl }}/features/#" class="features-block__item__link">
-						<span class="features-block__item__title">{% include icon.html icon='tools' %}Endlessly <strong>customizable</strong></span>
-						<span class="features-block__item__image"><img src="{{ site.baseurl }}/images/home/screenshot.png" alt="" /></span>
-					</a>
-				</div>
-			</div>
-			<div class="features-block__buttons">
-				<a href="{{ site.baseurl }}/features/" class="button button--big">{% include icon.html icon='zap' %}</span>Take the feature tour</a>
-			</div>
-		</div>
-	</section>
-	<section class="free-tastes-good-block home-block">
-		<div class="wrapper">
-			<h1 class="free-tastes-good-block__title">Free never tasted so good.</h1>
-			<p class="free-tastes-good-block__description">MyBB is a free and open source, community-based forum software project run by volunteers. We strive to build the best forum software available, period.</p>
-		</div>
-	</section>
-	<section class="about-block home-block">
-		<div class="wrapper">
-			<h2 class="about-block__title">Learn more about the MyBB project</h2>
-			<nav class="about-block__nav">
-				<ul class="about-block__links">
-					<li class="about-block__links__item">
-						<a href="{{ site.baseurl }}/about/" class="about-block__links__item__link">{% include icon.html icon='info' %}<span>About MyBB</span></a>
-					</li>
-					<li class="about-block__links__item">
-						<a href="{{ site.baseurl }}/about/team/" class="about-block__links__item__link">{% include icon.html icon='organization' %}<span>About the Team</span></a>
-					</li>
-					<li class="about-block__links__item">
-						<a href="{{ site.baseurl }}/get-involved/" class="about-block__links__item__link">{% include icon.html icon='code' %}<span>Get Involved</span></a>
-					</li>
-					<li class="about-block__links__item">
-						<a href="{{ site.baseurl }}/about/history/" class="about-block__links__item__link">{% include icon.html icon='history' %}<span>MyBB through the Years</span></a>
-					</li>
+			<h1 class="features-block__title">Even more to offer</h1>
+			<h2 class="features-block__subtitle">Don't miss any of the great features you can get with MyBB!</h2>
+			<section class="block">
+				<div class="feature-tour-list">
+					{% for item in site.data.features %}
+						{% assign item_url = item | prepend:"/features/" | append:"/" %}
+						{% assign p = site.features | where:"url", item_url | first %}
+					  <div class="feature-tour-list__item">
+						  <h2 class="feature-tour-list__item__title"><a href="{{ site.baseurl }}{{ item_url }}" class="feature-tour-list__item__link">{{ p.title }}</a></h2>
+						  <p class="feature-tour-list__item__description">{{ p.meta_description }}</p>
+					  </div>
+					{% endfor %}
 				</ul>
-			</nav>
-		</div>
-	</section>
-	<section class="follow-block home-block">
-		<div class="wrapper">
-			<h2 class="follow-block__title">Follow the MyBB project</h2>
-			<div class="follow-block__social-buttons social-buttons">
-				{% include social_buttons.html %}
-			</div>
+			</section>
 		</div>
 	</section>
 </article>

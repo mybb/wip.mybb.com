@@ -1,0 +1,42 @@
+.tour-navigation {
+	padding-top: 20px;
+	border-top: 1px dotted $border-2;
+	font-size: 1em;
+	text-align: center;
+    @include clearfix();
+
+    &__item {
+        margin: 0 0 10px 0;
+
+        &--previous {
+            font-size: 0.8em;
+
+            .tour-navigation__item--previous__link {
+                color: $alt-font-color-2;
+            }
+        }
+
+        @include bp-medium {
+            min-width: 200px;
+
+            &--next {
+                float: $right;
+                text-align: $right;
+
+                &__link {
+
+                }
+            }
+
+            &--previous {
+                float: $left;
+                text-align: $left;
+            }
+        }
+
+
+        &__link {
+            text-decoration: none;
+        }
+    }
+}
