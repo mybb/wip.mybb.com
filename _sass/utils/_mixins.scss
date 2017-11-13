@@ -19,6 +19,7 @@
         margin-top: -2px;
         margin-#{$left}: $margin-left;
         margin-#{$right}: $margin-right;
+        @content;
 
         g {
             fill: $color !important;
@@ -30,6 +31,16 @@
 
     .icon svg g {
         fill: $color !important;
+    }
+}
+
+@mixin links() {
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        @content;
     }
 }
 
@@ -78,12 +89,12 @@
     }
 }
 
-@mixin black-transparency($transparency) {
-    color: rgba(0,0,0,$transparency);
+@mixin black-transparency($transparency, $attr: color) {
+    #{$attr}: rgba(0,0,0,$transparency);
 }
 
-@mixin white-transparency($transparency) {
-    color: rgba(255,255,255,$transparency);
+@mixin white-transparency($transparency, $attr: color) {
+    #{$attr}: rgba(255,255,255,$transparency);
 }
 
 @mixin transform($transform) {

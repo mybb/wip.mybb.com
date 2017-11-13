@@ -15,26 +15,45 @@ redirect_from:
 			<p class="main-feature__description">MyBB is the <strong>free and open source</strong> forum software powering thousands of engaging, powerful, and unique communities across the internet.</p>
 			<div class="main-feature__buttons">
 				<a href="{{ site.baseurl }}/download" class="button button--big">{% include icon.html icon='cloud-download' %}Download now</a>
-				<a href="#features" class="button button--big button--secondary">{% include icon.html icon='zap' %}Take the feature tour</a>
+				<a href="#features" class="button button--big button--secondary">{% include icon.html icon='rocket' %}Take the feature tour</a>
 			</div>
 		</div>
 	</header>
-	<section class="features-block home-block" id="features">
+	<section class="home-block home-block--why">
 		<div class="wrapper">
-			<h1 class="features-block__title">Even more to offer</h1>
-			<h2 class="features-block__subtitle">Don't miss any of the great features you can get with MyBB!</h2>
-			<section class="block">
-				<div class="feature-tour-list">
-					{% for item in site.data.features %}
-						{% assign item_url = item | prepend:"/features/" | append:"/" %}
-						{% assign p = site.features | where:"url", item_url | first %}
-					  <div class="feature-tour-list__item">
-						  <h2 class="feature-tour-list__item__title"><a href="{{ site.baseurl }}{{ item_url }}" class="feature-tour-list__item__link">{{ p.title }}</a></h2>
-						  <p class="feature-tour-list__item__description">{{ p.meta_description }}</p>
-					  </div>
-					{% endfor %}
-				</ul>
-			</section>
+			<h1 class="home-block__title">Why MyBB?</h1>
+			<h2 class="home-block__subtitle">There are plenty of reasons to use MyBB, but these are some of our favorites.</h2>
 		</div>
+	</section>
+	<section class="home-block home-block--get-involved">
+		<div class="wrapper">
+			<h1 class="home-block__title">Get Involved</h1>
+			<h2 class="home-block__subtitle">We're a free software, so the users keep us going!</h2>
+		</div>
+	</section>
+	<section class="home-block home-block--features" id="features">
+		<div class="wrapper">
+			<h1 class="home-block__title">Even more to offer</h1>
+			<h2 class="home-block__subtitle">Don't miss any of the great features you can get with MyBB!</h2>
+			<div class="feature-tour__footer__list">
+                {% for item in site.data.features %}
+                    {% assign item_url = item | prepend:"/features/" | append:"/" %}
+                    {% assign p = site.features | where:"url", item_url | first %}
+                  <div class="feature-tour__footer__list__item">
+                      {% include icon.html icon=p.icon %}
+                      <h2 class="feature-tour__footer__list__item__title"><a href="{{ site.baseurl }}{{ item_url }}" class="feature-tour__footer__list__item__link">{{ p.title }}</a></h2>
+                      <p class="feature-tour__footer__list__item__description">{{ p.meta_description }}</p>
+                  </div>
+                {% endfor %}
+            </div>
+		</div>
+	</section>
+	<section class="home-block home-block--download">
+		<div class="wrapper">
+			<h1 class="home-block__title">What are you waiting for?</h1>
+			<h2 class="home-block__subtitle">If you still have questions about what's available, check out our <a href="#features" class="home-block__subtitle__link">Feature Tour</a> or have a look at the <a href="https://docs.mybb.com" class="home-block__subtitle__link">Docs</a>.</h2>
+			<div class="home-block__buttons">
+				<a href="{{ site.baseurl }}/download" class="button button--big button--secondary button--primary-border">{% include icon.html icon='cloud-download' %}Download now</a>
+			</div>
 	</section>
 </article>

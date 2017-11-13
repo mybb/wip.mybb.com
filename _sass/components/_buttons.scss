@@ -40,6 +40,10 @@ a.button {
         }
     }
 
+    &.button--primary-border {
+        border-color: $primary-color;
+    }
+
     @include bp-medium-max {
 
         &.button--full-width {

@@ -4,6 +4,7 @@ section: features
 
 title: Administration
 meta_description: Developed and refined to put you in full control of your forum.
+icon: settings
 
 redirect_from:
 - /features/03-administration/

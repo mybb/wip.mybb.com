@@ -35,42 +35,25 @@
 
 
 .main--home {
-	line-height: 1.4;
+	padding: 0;
 
 	.main-feature {
 
 		.wrapper {
-			padding: 20px 10px 5px 10px;
+			padding: 50px 10px 5px 10px;
 			border-bottom: none;
 			position: relative;
-
-			@include bp-medium {
-				padding: 20px 260px 5px 20px s;
-			}
 		}
 
-		.main-feature__page-title {
+		&__page-title {
 			font-size: 2.4em;
-
-			@include bp-medium {
-				font-size: 3em;
-			}
 		}
 
-		.main-feature__description {
+		&__description {
 			font-size: 1.4em;
-			font-weight: 300;
-
-			@include bp-medium {
-				font-size: 1.6em;
-			}
-
-			strong {
-				font-weight: 400;
-			}
 		}
 
-		.main-feature__buttons {
+		&__buttons {
 			margin: side-values(30px 0 0 -5px);
 		}
 	}
@@ -85,206 +68,52 @@
 	}
 }
 
-.features-block {
-	background: $background-2;
-	@include clearfix();
+.home-block {
 
 	.wrapper {
-		padding: 40px 10px;
-
-		@include bp-medium {
-			padding: 40px 20px;
-		}
+		padding: 50px 10px;
 	}
 
-	.features-block__title {
-		font-weight: 400;
+	&__title {
+		font-weight: normal;
+		margin: 0 0 10px 0;
 		font-family: $alt-font-stack;
 		font-size: 1.8em;
-		margin: 0 0 30px 0;
-		text-align: center;
 		color: $alt-font-color-4;
+	}
 
-		@include bp-medium {
-			font-size: 2.4em;
+	&__subtitle {
+		font-weight: normal;
+		font-size: 1em;
+		color: $alt-font-color-2;
+		margin: 0 0 30px 0;
+	}
+
+	&--why {
+		background: $background-2;
+	}
+
+	&--get-involved {
+
+		.wrapper {
+			border-bottom: 1px dashed $border-2;
 		}
 	}
 
-	.features-block__container {
-		@include clearfix;
-	}
+	&--download {
+		background: $primary-color;
 
-	.features-block__item {
-		box-sizing: border-box;
-		padding-bottom: 30px;
-
-		@include bp-medium {
-			width: 50%;
-			float: $left;
-
-			&:nth-child(odd) {
-				padding-#{$right}: 20px;
-			}
-
-			&:nth-child(even) {
-				padding-#{$left}: 20px;
-			}
+		.home-block__title {
+			color: $invert-font-color;
 		}
 
-		.features-block__item__link {
-			@include icon(20px, currentColor, 10px);
+		.home-block__subtitle {
+			@include white-transparency(0.7);
 
-			&:hover, &:active {
-				text-decoration: none;
-			}
-		}
-
-		.features-block__item__title {
-			font-size: 1.1em;
-			display: block;
-			margin-bottom: 10px;
-			font-weight: 400;
-
-			@include bp-medium {
-				font-size: 1.3em;
-			}
-
-			strong {
-				font-weight: 400;
-			}
-		}
-
-		.features-block__item__image {
-			display: block;
-
-			img {
-				width: 100%;
-				border-radius: 5px;
-			}
-		}
-	}
-
-	.features-block__buttons {
-		margin-top: 10px;
-		text-align: center;
-	}
-}
-
-.free-tastes-good-block {
-
-	.wrapper {
-		padding: 30px 10px 10px;
-
-		@include bp-medium {
-			padding: 30px 20px 10px;
-		}
-	}
-
-	.free-tastes-good-block__title {
-		font-weight: 300;
-		font-size: 1.8em;
-		font-family: $alt-font-stack;
-		// color: $secondary-color;
-		text-align: center;
-		margin: 0;
-
-		@include bp-medium {
-			font-size: 2.4em;
-		}
-	}
-
-	.free-tastes-good-block__description {
-		font-weight: 300;
-		font-size: 1.2em;
-
-		@include bp-medium {
-			font-size: 1.6em;
-		}
-	}
-}
-
-.about-block {
-	background: $dark-background-2;
-	color: $invert-font-color;
-
-	.wrapper {
-		padding: 20px 10px;
-
-		@include bp-medium {
-			padding: 20px;
-		}
-	}
-
-	.about-block__title {
-		font-weight: 300;
-		font-size: 1.2em;
-		margin: 0 0 15px 0;
-		color: $alt-font-color-3;
-
-		@include bp-medium {
-			font-size: 1.6em;
-		}
-	}
-
-	.about-block__links {
-		list-style: none;
-		margin: 0 0 5px 0;
-		padding: 0;
-
-		.about-block__links__item {
-			display: inline-block;
-			margin-#{$right}: 20px;
-
-			.about-block__links__item__link {
-				color: $invert-font-color;
-				@include icon(16px, $alt-font-color-3, 6px);
-
-				&:hover, &:active {
-
-				}
-			}
-		}
-	}
-}
-
-.follow-block {
-
-	.wrapper {
-		padding: 30px 10px 10px 10px;
-
-		@include bp-medium {
-			padding: 30px 20px 10px 20px;
-		}
-	}
-
-	.follow-block__title {
-		font-weight: 300;
-		font-size: 1.2em;
-		color: $alt-font-color-1;
-		margin: 0;
-
-		@include bp-medium {
-			font-size: 1.6em;
-			float: $left;
-		}
-	}
-
-
-	.social-buttons {
-		margin-top: 20px;
-
-		@include bp-medium {
-			border-#{$left}: 1px solid $border-1;
-			padding: side-values(8px 0 4px 20px);
-			margin: side-values(4px 0 0 20px);
-			float: $left;
-
-			.social-buttons__button {
-				float: $left;
-				display: inline-block;
-
-				&.social-buttons__button--twitter {
-					margin-#{$right}: 12px;
+			&__link {
+				@include links {
+					color: $invert-font-color;
+					font-weight: bold;
 				}
 			}
 		}

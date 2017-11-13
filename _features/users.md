@@ -4,6 +4,7 @@ section: features
 
 title: Users
 meta_description: Features to keep your users engaged and active.
+icon: organization
 
 redirect_from:
 - /features/10-user-promotions/
