@@ -28,7 +28,16 @@
 					padding: 0 5px 10px 5px;
 					text-align: center;
 					flex-grow: 1;
-					flex-basis: 0;
+					box-sizing: border-box;
+					flex-basis: 50%;
+
+					@include bp-medium {
+						flex-basis: 25%;
+					}
+
+					@include bp-large {
+						flex-basis: 0;
+					}
 
 					&__link {
 						display: block;

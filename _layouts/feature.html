@@ -9,7 +9,7 @@
                             {% assign item_url = item | prepend:"/features/" | append:"/" %}
                             {% assign p = site.features | where:"url", item_url | first %}
                           <li class="feature-tour__header__nav__links__item {% if item_url == page.url %} feature-tour__header__nav__links__item--active{% endif %}">
-                              <a href="{{ site.url }}{{ item_url }}" class="feature-tour__header__nav__links__item__link">{% include icon.html icon=p.icon %} {{ p.title }}</a></li>
+                              <a href="{{ site.baseurl }}{{ item_url }}" class="feature-tour__header__nav__links__item__link">{% include icon.html icon=p.icon %} {{ p.title }}</a></li>
                         {% endfor %}
                     </ul>
                 </nav>
