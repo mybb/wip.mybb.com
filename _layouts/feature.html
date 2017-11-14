@@ -33,26 +33,17 @@
         {% for item in site.data.features %}
             {% assign item_url = item | prepend:"/features/" | append:"/" %}
                 {% if item_url == page.url %}
-                    <div class="feature-tour__navigation {% if forloop.last %}feature-tour__navigation--empty{% endif %}">
+                    <div class="feature-tour__next">
                         <div class="wrapper">
                             {% if forloop.last %}
+                                <span class="feature-tour__next__text">Ready to get started?</span>
+                                <a href="{{ site.baseurl }}/download" class="button button--medium feature-tour__next__link">{% include icon.html icon='cloud-download' %}Download MyBB</a>
                             {% else %}
                                 {% assign next = forloop.index0 | plus: 1 %}
                                 {% assign next_page = site.data.features[next] | prepend:"/features/" | append:"/" %}
                                 {% assign next_p = site.features | where:"url", next_page | first %}
-                                <div class="feature-tour__navigation__item feature-tour__navigation__item--next">
-                                    <span class="feature-tour__navigation__item__text">Up Next:</span>
-                                    <a href="{{ site.baseurl }}{{ next_page }}" class="feature-tour__navigation__item__link feature-tour__navigation__item--next__link">{{ next_p.title }}</a>
-                                </div>
-                            {% endif %}
-                            {% if forloop.first %}
-                            {% else %}
-                            <!--<div class="feature-tour__navigation__item feature-tour__navigation__item--previous">
-                                {% assign previous = forloop.index0 | minus: 1 %}
-                                {% assign previous_page = site.data.features[previous] | prepend:"/features/" | append:"/" %}
-                                {% assign prev_p = site.features | where:"url", previous_page | first %}
-                                <a href="{{ site.baseurl }}{{ previous_page }}" class="feature-tour__navigation__item__link feature-tour__navigation__item--previous__link">{{ prev_p.title }}</a>
-                            </div>-->
+                                <span class="feature-tour__next__text">Up Next:</span>
+                                <a href="{{ site.baseurl }}{{ next_page }}" class="button button--medium feature-tour__next__link"> {% include icon.html icon=next_p.icon %}{{ next_p.title }}</a>
                             {% endif %}
                         </div>
                     </div>

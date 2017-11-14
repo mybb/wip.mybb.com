@@ -68,60 +68,20 @@
 		}
 	}
 
-	&__navigation {
-	    @include clearfix();
+	&__next {
 		background: $background-2;
 
-		&--empty {
-			display: none;
-		}
-
 		.wrapper {
-			padding: 30px 20px 20px 20px;
+			padding: 20px 0;
+			text-align: center;
 		}
 
-	    &__item {
-	        margin: 0 0 10px 0;
-
-	        &--previous {
-				display: none;
-	            font-size: 0.8em;
-
-	            .tour-navigation__item--previous__link {
-	                color: $alt-font-color-2;
-	            }
-	        }
-
-	        @include bp-medium {
-	            // min-width: 200px;
-
-	            &--next {
-	                // float: $right;
-	                // text-align: $right;
-					text-align: center;
-
-	                &__link {
-						font-size: 1.2em;
-	                }
-	            }
-
-	            &--previous {
-	                float: $left;
-	                text-align: $left;
-	            }
-	        }
-
-			&__text {
-				text-transform: uppercase;
-				color: $alt-font-color-2;
-				font-size: 0.9em;
-				margin-#{$right}: 10px;
-			}
-
-	        &__link {
-	            text-decoration: none;
-	        }
-	    }
+		&__text {
+			text-transform: uppercase;
+			color: $alt-font-color-2;
+			font-size: 0.9em;
+			display: block;
+		}
 	}
 
 	&__footer {
