@@ -4,9 +4,18 @@
 - url: about/team
   title: About the Team
   icon: organization
-- url: about/license
-  title: License Agreement
-  icon: law
+- url: about/conduct
+  title: Code of Conduct
+  icon: pin
+- url: about/rfcs
+  title: RFC Documents
+  icon: book
+- url: about/ecosystem
+  title: MyBB Ecosystem
+  icon: globe
 - url: contact
-  title: Contact the MyBB Group
+  title: Contact Us
   icon: mail
+- url: about/donations
+  title: Donate
+  icon: zap

@@ -8,6 +8,10 @@
 		margin: 2em 0 0.5em 0;
 		font-size: 1.5em;
 		font-family: $alt-font-stack;
+
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 
 	h2 {
@@ -22,6 +26,10 @@
 
 	p {
 		margin: 0 0 20px 0;
+
+		&:last-child {
+			margin: 0;
+		}
 	}
 
 	.block__heading {
