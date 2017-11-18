@@ -40,7 +40,7 @@
                     transition: background $transition-speed ease, color $transition-speed ease;
 
                     @include bp-medium {
-                        padding: 14px 8px;
+                        padding: 14px 6px;
                     }
 
                     @include bp-large {
@@ -59,7 +59,7 @@
                     }
 
                     @include icon(16px, $alt-font-color-2, auto, auto) {
-                        margin-right: 3px;
+                        margin-right: 2px;
                     }
                 }
             }
