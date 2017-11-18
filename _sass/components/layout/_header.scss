@@ -1,17 +1,29 @@
 .header {
     background: $dark-background-1;
     display: flex;
-    height: $header-height;
+    flex-direction: column;
+
+    @include bp-medium {
+        flex-direction: row;
+        height: $header-height;
+    }
 
     &__title {
-        float: $left;
         height: 100%;
         margin: 0;
 
+        @include bp-medium {
+            float: $left;
+        }
+
         .logo {
-            height: 100%;
+            height: $header-height;
             align-items: center;
             display: flex;
+
+            @include bp-medium {
+                height: 100%;
+            }
         }
     }
 
@@ -21,8 +33,9 @@
 
     .menu-button {
         position: absolute;
-        top: 16px;
-        right: 20px;
+        top: 0;
+        right: 0;
+        padding: 24px 15px;
         @include icon(30px, $invert-font-color);
 
         @include bp-medium {
@@ -34,10 +47,6 @@
 .main-menu {
     height: 100%;
 
-    @include bp-medium-max {
-        margin-top: 60px;
-    }
-
     &__links {
         height: 100%;
         list-style: none;
@@ -48,9 +57,9 @@
         justify-content: flex-end;
 
         @include bp-medium-max {
-            // flex-direction: row;
             flex-wrap: wrap;
             background: $dark-background-2;
+            margin: 0 -5%;
         }
 
         &__gap {
@@ -67,7 +76,8 @@
             transition: background $transition-speed ease;
 
             @include bp-medium-max {
-                width: 50%;
+                width: 30%;
+                box-sizing: border-box;
             }
 
             &__link {
@@ -82,7 +92,9 @@
                 align-items: center;
 
                 @include bp-medium-max {
-                    padding: 10px 0;
+                    height: auto;
+                    padding: 12px 0;
+                    font-size: $font-small;
                 }
 
                 &:link, &:visited {
