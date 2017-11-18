@@ -21,7 +21,7 @@
         margin-#{$right}: $margin-right;
         @content;
 
-        g {
+        * {
             fill: $color !important;
         }
     }
@@ -29,7 +29,7 @@
 
 @mixin icon-fill($color) {
 
-    .icon svg g {
+    .icon svg * {
         fill: $color !important;
     }
 }
