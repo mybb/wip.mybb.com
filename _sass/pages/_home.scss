@@ -5,6 +5,7 @@
 
 		.wrapper {
 			padding: 50px $wrapper-padding-small;
+			margin-bottom: 0;
 			border-bottom: none;
 			position: relative;
 
@@ -93,5 +94,71 @@
 				}
 			}
 		}
+	}
+}
+
+.why-cards {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	&__card {
+		width: 100%;
+		background: $background-default;
+		border-radius: $radius;
+		text-align: center;
+		padding: 40px 20px 60px 20px;
+		box-sizing: border-box;
+		position: relative;
+		margin-bottom: 20px;
+		box-shadow: $border-1 0 0 10px;
+
+		@include bp-medium {
+			width: 48%;
+		}
+
+		@include bp-large {
+			width: 24%;
+		}
+
+		&__icon {
+			@include icon(40px, $alt-font-color-2, 0, 0);
+		}
+
+		&__title {
+			font-size: $font-regular;
+			color: $alt-font-color-1;
+		}
+
+		&__description {
+			font-size: $font-smallest;
+			line-height: 1.5;
+			color: $alt-font-color-2;
+		}
+
+		&__action {
+			position: absolute;
+			bottom: 0;
+			margin: 0 -20px 0 -20px;
+			width: 100%;
+			background: $background-1;
+			text-align: left;
+			font-size: $font-smallest;
+			font-weight: bold;
+			border-radius: 0 0 $radius $radius;
+
+			&__link {
+				display: block;
+				padding: 10px 10px 10px 20px;
+				display: flex;
+				justify-content: space-between;
+
+				@include icon(18px, $alt-font-color-2, 0, 0) {
+				}
+			}
+		}
+
+
 	}
 }
