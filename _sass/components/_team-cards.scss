@@ -1,55 +1,50 @@
 .team-cards {
     padding: 10px 0 0 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
 
     .card {
-        width: 49%;
         background: $background-1;
         border-radius: 5px;
         box-sizing: border-box;
         padding: 20px 45px;
         margin-bottom: 15px;
         text-align: center;
+        width: 100%;
 
-        .card__username {
+        @include bp-large {
+            width: 49%;
+        }
+
+        &__username {
             text-align: center;
             font-size: 1.4em;
             font-weight: normal;
             margin: 8px 0 18px 0;
+
+            &--has-name {
+                margin: 0;
+            }
         }
 
-        .card__username--has-name {
-            margin: 0;
-        }
-
-        .card__name {
+        &__name {
             text-align: center;
             font-size: 0.8em;
             font-weight: normal;
-            color: #888;
+            color: $alt-font-color-2;
             margin: 0 0 8px 0;
         }
 
-        .card__role {
+        &__role {
             text-align: center;
-            color: #888;
+            color: $alt-font-color-2;
             margin: 0 0 15px 0;
             font-size: 0.9em;
 
-            .card__role__container {
+            &__container {
                 padding: 2px 8px;
-                // border: 1px solid #e9e9e9;
                 background: $background-default;
                 display: inline-block;
                 border-radius: 4px;
@@ -80,7 +75,7 @@
             }
         }
 
-        .card__detail {
+        &__detail {
             margin: 0;
             font-size: 0.9em;
             display: inline-block;
@@ -90,12 +85,12 @@
                 font-size: 20px;
             }
 
-            .card__detail__title {
+            &__title {
                 @include visually-hidden;
             }
 
-            .card__detail__link {
-                color: #888;
+            &__link {
+                color: $alt-font-color-2;
                 background: none;
                 border: none;
                 margin: 0;
@@ -105,10 +100,10 @@
                     color: #ff7500;
                 }
             }
-        }
 
-        .card__detail__key {
-            display: none;
+            &__key {
+                display: none;
+            }
         }
     }
 }
