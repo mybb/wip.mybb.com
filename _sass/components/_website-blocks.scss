@@ -18,10 +18,9 @@
 		// color: $secondary-color;
 		color: $alt-font-color-4;
 		font-size: 1.2em;
-		line-height: 40px;
 		font-family: $alt-font-stack;
 		font-weight: 600;
-		margin: 0 0 0.5em 0;
+		margin: 0.5em 0 0.5em 0;
 	}
 
 	p {
@@ -36,7 +35,6 @@
 		margin-bottom: 10px;
 
 		.block__heading__title {
-			// color: $primary-color;
 			color: $font-color;
 			font-weight: 600;
 			margin-bottom: 2px;
@@ -44,17 +42,14 @@
 		}
 
 		.block__heading__subtitle {
-			// color: $secondary-color;
 			color: $alt-font-color-4;
 			font-size: 1.1em;
-			line-height: 40px;
-			margin: 0;
+			margin: 10px 0 0 0;
 			padding: 0;
 		}
 	}
 
 	.block__container {
-		// padding: 8px;
 
 		p {
 			margin: 0 0 15px 0;

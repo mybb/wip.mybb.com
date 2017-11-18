@@ -4,13 +4,16 @@
 		background: $primary-color;
 
 		.wrapper {
-			padding: 10px 20px 10px 20px;
+			padding: 10px $wrapper-padding-small;
+
+			@include bp-medium {
+				padding: 10px $wrapper-padding-large;
+			}
 		}
 
 		&__title {
 			font-family: $alt-font-stack;
 			font-weight: 600;
-			// font-style: italic;
 			color: $invert-font-color;
 		}
 
@@ -30,6 +33,14 @@
 					flex-grow: 1;
 					box-sizing: border-box;
 					flex-basis: 50%;
+
+					&:first-child {
+						padding-left: 0;
+					}
+
+					&:last-child {
+						padding-right: 0;
+					}
 
 					@include bp-medium {
 						flex-basis: 25%;
@@ -87,7 +98,11 @@
 	&__footer {
 
 		.wrapper {
-			padding: 50px 20px;
+			padding: 50px $wrapper-padding-small;
+
+			@include bp-medium {
+				padding: 50px $wrapper-padding-large;
+			}
 		}
 
 		&__title {

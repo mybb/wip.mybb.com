@@ -83,10 +83,10 @@ textarea {
     padding: side-values(20px 0 30px 0);
 
     .wrapper {
-    	padding: 0 10px;
+    	padding: 0 $wrapper-padding-small;
 
         @include bp-medium {
-            padding: 0 20px;
+            padding: 0 $wrapper-padding-large;
         }
     }
 

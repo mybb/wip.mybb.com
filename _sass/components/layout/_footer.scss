@@ -37,6 +37,7 @@
                 &__link {
                     display: block;
                     padding: 6px 12px;
+                    transition: background $transition-speed ease, color $transition-speed ease;
 
                     @include bp-medium {
                         padding: 14px 8px;
