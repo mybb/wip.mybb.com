@@ -26,7 +26,12 @@
                 padding: 0;
 
                 @include bp-medium {
+                    font-size: 0.7em;
                     display: inline-block;
+                }
+
+                @include bp-large {
+                    font-size: 0.8em;
                 }
 
                 &__link {
@@ -34,7 +39,11 @@
                     padding: 6px 12px;
 
                     @include bp-medium {
-                        padding: 18px 10px;
+                        padding: 14px 8px;
+                    }
+
+                    @include bp-large {
+                        padding: 18px 12px;
                     }
 
                     @include links {
@@ -66,12 +75,14 @@
             }
         }
     }
+}
 
-    &__copyright {
-        display: none;
-        float: $right;
-        margin: 0;
-        font-size: 0.75em;
-        color: $alt-font-color-2;
-    }
+.copyright {
+    display: none;
+    background: $dark-background-2;
+    font-size: 0.75em;
+    color: $alt-font-color-2;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
 }

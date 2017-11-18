@@ -1,6 +1,5 @@
     <footer class="footer">
         <div class="wrapper">
-            <p class="footer__copyright">Copyright &copy; 2002-{{ site.time | date: '%Y' }} MyBB Group</p>
             <nav class="footer__nav footer__nav--internal">
                 <ul class="footer__nav__links">
                     <li class="footer__nav__links__item">
@@ -13,7 +12,7 @@
                         <a href="{{ site.baseurl }}/support/" class="footer__nav__links__item__link">Support</a>
                     </li>
                     <li class="footer__nav__links__item">
-                        <a href="{{ site.baseurl }}/contact/" class="footer__nav__links__item__link">Contact Us</a>
+                        <a href="{{ site.baseurl }}/contact/" class="footer__nav__links__item__link">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -35,5 +34,8 @@
             </nav>
         </div>
     </footer>
+    <div class="copyright">
+        Copyright &copy; 2002-{{ site.time | date: '%Y' }} MyBB Group
+    </div>
 </body>
 </html>
