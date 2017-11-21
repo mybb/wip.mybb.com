@@ -68,6 +68,10 @@
 
 	&--why {
 		background: $background-2;
+
+		.wrapper {
+			padding-bottom: 20px;
+		}
 	}
 
 	&--get-involved {
@@ -107,46 +111,65 @@
 		width: 100%;
 		background: $background-default;
 		border-radius: $radius;
-		text-align: center;
-		padding: 40px 20px 60px 20px;
 		box-sizing: border-box;
 		position: relative;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 		box-shadow: $border-1 0 0 10px;
+		text-align: left;
+		padding: 20px 20px 60px 80px;
 
 		@include bp-medium {
 			width: 48%;
 		}
 
 		@include bp-large {
-			width: 24%;
+			width: 23.5%;
+			text-align: center;
+			padding: 35px 20px 70px 20px;
 		}
 
 		&__icon {
 			@include icon(40px, $alt-font-color-2, 0, 0);
+			float: left;
+			margin-left: -60px;
+
+			@include bp-large {
+				float: none;
+				margin: 0;
+			}
 		}
 
 		&__title {
 			font-size: $font-regular;
 			color: $alt-font-color-1;
+			margin: 0;
+
+			@include bp-large {
+				margin-top: 20px;
+			}
 		}
 
 		&__description {
 			font-size: $font-smallest;
 			line-height: 1.5;
 			color: $alt-font-color-2;
+			margin: 10px 0 0 0;
 		}
 
 		&__action {
 			position: absolute;
 			bottom: 0;
-			margin: 0 -20px 0 -20px;
+			margin: 0 -20px 0 -80px;
 			width: 100%;
 			background: $background-1;
 			text-align: left;
 			font-size: $font-smallest;
 			font-weight: bold;
 			border-radius: 0 0 $radius $radius;
+
+			@include bp-large {
+				margin: 0 -20px;
+			}
 
 			&__link {
 				display: block;
