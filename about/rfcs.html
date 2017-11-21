@@ -13,27 +13,18 @@ meta_description: Accepted MyBB RFC documents and the Request For Comments proce
 <div class="page-content page-content--sidebar">
 	<section class="block">
 		<h1>Accepted RFC documents</h1>
-		<table class="standard_table" summary="Accepted RFC documents">
-			<thead>
-				<tr>
-					<th>MyBB RFC</th>
-					<th>Document title</th>
-					<th>Date accepted</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% assign documents = (site.rfcs | sort: 'rfc_date') | reverse %}
-				{% for document in documents %}
-					{% assign rfc_title_words = document.relative_path | replace: "_rfcs/" | replace: ".md" | split: "-" %}
-					{% assign rfc_public_id = rfc_title_words[0] %}
-					<tr>
-				  		<td><a href="{{ document.url }}"><strong>#{{ rfc_public_id }}</strong></a></td>
-				  		<td><a href="{{ document.url }}">{{ document.title }}</a></td>
-				  		<td>{{ document.date | date_to_string }}</td>
-			  		</tr>
-				{% endfor %}
-			</tbody>
-		</table>
+		<ul class="rfcs-list">
+			{% assign documents = (site.rfcs | sort: 'rfc_date') | reverse %}
+			{% for document in documents %}
+				{% assign rfc_title_words = document.relative_path | replace: "_rfcs/" | replace: ".md" | split: "-" %}
+				{% assign rfc_public_id = rfc_title_words[0] %}
+				<li class="rfcs-list__item">
+					<span class="rfcs-list__item__number"><a href="{{ document.url }}" class="rfcs-list__item__number__link">#{{ rfc_public_id }}</a></span>
+					<h3 class="rfcs-list__item__title"><a href="{{ document.url }}" class="rfcs-list__item__title__link">{{ document.title }}</a></h3>
+					<p class="rfcs-list__item__date">{{ document.date | date_to_string }}</p>
+				</li>
+			{% endfor %}
+		</ul>
 	</section>
 	<section class="block">
 {% capture markdown %}
