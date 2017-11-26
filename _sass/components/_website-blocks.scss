@@ -31,17 +31,17 @@
 		}
 	}
 
-	.block__heading {
+	&__heading {
 		margin-bottom: 10px;
 
-		.block__heading__title {
+		&__title {
 			color: $font-color;
 			font-weight: 600;
 			margin-bottom: 2px;
 			padding: 0;
 		}
 
-		.block__heading__subtitle {
+		&__subtitle {
 			color: $alt-font-color-4;
 			font-size: 1.1em;
 			margin: 10px 0 0 0;
@@ -49,7 +49,7 @@
 		}
 	}
 
-	.block__container {
+	&__container {
 
 		p {
 			margin: 0 0 15px 0;
@@ -60,7 +60,7 @@
 		}
 	}
 
-	.block__action {
+	&__action {
 		margin-top: -10px;
 		@include icon(16px, currentColor, 4px, 0);
 
@@ -84,9 +84,9 @@
 		font-size: 1.1em;
 	}
 
-	.section-menu__links {
+	&__links {
 
-		.section-menu__links__item {
+		&__item {
 
 			&,
 			&:nth-child(odd),
@@ -108,18 +108,18 @@
 
 .sidebar__nav {
 
-	.sidebar__nav__links {
+	&__links {
 		list-style: none;
 		margin: -5px -6px 0 -6px;
 		padding: 0;
 
-		.sidebar__nav__links__item {
+		&__item {
 			margin: 0;
 			padding: 0;
 			font-size: 1.1em;
 			border-bottom: 1px solid $border-3;
 
-			.sidebar__nav__links__item__link {
+			&__link {
 				padding: 4px 6px;
 				display: block;
 			}
@@ -143,7 +143,7 @@
 	border-top: 2px solid $border-1;
 	margin-bottom: 30px;
 
-	.team-list__member {
+	&__member {
 		padding: 8px 12px;
 		border-bottom: 1px solid $border-1;
 
@@ -151,7 +151,7 @@
 			@include clearfix;
 		}
 
-		.team-list__member__name {
+		&__name {
 			color: $font-color;
 			font-weight: 700;
 			margin: 0;
@@ -164,15 +164,15 @@
 			}
 		}
 
-		&.team-list__member--lead {
+		&--lead {
 
 			.team-list__member__name {
 				color: $secondary-color;
 			}
 		}
 
-		.team-list__member__profile,
-		.team-list__member__website {
+		&__profile,
+		&__website {
 			display: inline-block;
 			font-size: 0.8em;
 			margin: side-values(0 10px 0 0);
@@ -183,11 +183,10 @@
 				width: 33%;
 				margin: 0;
 			}
-		}
 
-		.team-list__member__profile__link,
-		.team-list__member__website__link {
-			color: $alt-font-color-1;
+			&__link {
+				color: $alt-font-color-1;
+			}
 		}
 	}
 }

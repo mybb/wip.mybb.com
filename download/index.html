@@ -3,18 +3,72 @@ layout: simple
 section: download
 title: Download
 description:
+meta_description: Download the latest version of MyBB, a free and open source PHP forum software.
+
+redirect_from:
+- /downloads/
 ---
+{% include latest_version.html %}
+
 <article class="main main--download">
-    <section class="download-block download-block--download">
+    <section class="download-block download-block--latest-version latest-version">
         <div class="wrapper">
-            <h1 class="download-block__title">Download MyBB to get your community rolling.</h1>
-
-        </div>        
+            <h1 class="latest-version__title">Download MyBB to get your community rolling.</h1>
+            <div class="latest-version__download"><a href="{{ latest_version_first_location_url }}" class="latest-version__download__link button" data-no-instant>{% include icon.html icon='cloud-download' %} Download MyBB {{ latest_version.version_number }}</a></div>
+            <div class="latest-version__details">
+                <p class="latest-version__details__item latest-version__details__item--file-type">.{{ latest_version_first_format.type }}</p>
+                {% if latest_version_first_format.filesize %}<p class="latest-version__details__item latest-version__details__item--file-size">{{ latest_version_first_format.filesize }}</p>{% endif %}
+                <p class="latest-version__details__item latest-version__details__item--date">{{ latest_version.release_date | date: "%b %d, %Y" }}</p>
+                <p class="latest-version__details__item latest-version__details__item--release-type">{{ latest_version_types_amp }} release</p>
+            </div>
+            <div class="latest-version__actions">
+                <p class="latest-version__actions__item"><a href="{{ site.baseurl }}/versions/{{ latest_version.version_number }}/" class="latest-version__actions__item__link">{% include icon.html icon='info' %} <span>Release notes, upgrading, verifying</span></a></p>
+                <p class="latest-version__actions__item"><a href="https://docs.mybb.com/1.8/install/" class="latest-version__actions__item__link">{% include icon.html icon='book' %} <span>Installation Guide</span></a></p>
+                <p class="latest-version__actions__item"><a href="https://community.mybb.com/forum-175.html" class="latest-version__actions__item__link">{% include icon.html icon='question' %} <span>Support Forums</span></a>
+            </div>
+        </div>
     </section>
-    <section class="download-block download-block--actions">
-
+    <section class="download-block download-block--connect">
+        <div class="wrapper">
+            <h2 class="download-block--connect__title">Connect with MyBB</h2>
+            <p class="download-block--connect__description">Stay on top of what's happening.</p>
+            <div class="social-buttons">
+                <div class="social-buttons__button social-buttons__button--blog"><a href="https://blog.mybb.com/follow/" class="button button--secondary button--primary-border">{% include icon.html icon='mail' %} Subscribe to Blog</a></div>
+                <div class="social-buttons__button social-buttons__button--twitter"><a href="https://twitter.com/MyBB?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @MyBB</a></div>
+                <div class="social-buttons__button social-buttons__button--twitter"><a href="https://twitter.com/MyBBSecurity?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @MyBBSecurity</a></div>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
     </section>
     <section class="download-block download-block--more">
-
+        <div class="wrapper">
+            <h1 class="download-block--more__title">Do even more with MyBB</h1>
+            <div class="action-cards action-cards--three">
+				<div class="action-cards__card">
+					<span class="action-cards__card__icon">{% include icon.html icon='arrow-right' %}</span>
+					<h3 class="action-cards__card__title">Merge System</h3>
+					<p class="action-cards__card__description">MyBB's Merge System allows you to directly convert from several popular forum softwares and merge into a single MyBB forum. You can also combine multiple MyBB forums into one.</p>
+					<p class="action-cards__card__action">
+						<a href="{{ site.baseurl }}/download/merge-system/" class="action-cards__card__action__link"><span>Download Merge System</span> {% include icon.html icon='arrow-right' %}</a>
+					</p>
+				</div>
+                <div class="action-cards__card">
+					<span class="action-cards__card__icon">{% include icon.html icon='organization' %}</span>
+					<h3 class="action-cards__card__title">Translations</h3>
+					<p class="action-cards__card__description">MyBB comes with an English language pack; however, the MyBB Community has also produced a large number of translations for visitors who don't speak English, including right-to-left languages.</p>
+					<p class="action-cards__card__action">
+						<a href="https://community.mybb.com/mods.php?action=browse&category=19" class="action-cards__card__action__link"><span>View Translations</span> {% include icon.html icon='arrow-right' %}</a>
+					</p>
+				</div>
+                <div class="action-cards__card">
+					<span class="action-cards__card__icon">{% include icon.html icon='gear' %}</span>
+					<h3 class="action-cards__card__title">Extend MyBB</h3>
+					<p class="action-cards__card__description">Plugins and themes let you make your MyBB forum your own. Plugins add new features to MyBB, and take just a few clicks to install. Themes give your discussion board a distinctive feel.</p>
+					<p class="action-cards__card__action">
+						<a href="https://community.mybb.com/mods.php" class="action-cards__card__action__link"><span>Visit Extend MyBB</span> {% include icon.html icon='arrow-right' %}</a>
+					</p>
+				</div>
+            </div>
+        </div>
     </section>
 </article>

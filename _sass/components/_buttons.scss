@@ -126,6 +126,10 @@ a.button {
 		}
 	}
 
+    &.button--no-margin {
+        margin: 0;
+    }
+
     &:hover, &:active {
         outline: none;
     }
