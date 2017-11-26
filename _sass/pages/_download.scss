@@ -14,7 +14,6 @@
     }
 
     &--connect {
-        // background: $background-2;
         background: $primary-color;
         color: $invert-font-color;
         padding: 15px 0;
@@ -99,10 +98,6 @@
             margin: 0 20px 10px 0;
 
             &__link {
-                @include links {
-                    color: $alt-font-color-1;
-                }
-
                 @include icon(18px, $alt-font-color-2, 4px, 0);
             }
         }

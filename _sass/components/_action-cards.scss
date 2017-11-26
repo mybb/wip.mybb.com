@@ -13,10 +13,25 @@
 		margin-bottom: 30px;
 		box-shadow: $border-1 0 0 10px;
 		text-align: left;
-		padding: 20px 20px 60px 80px;
+		transition: box-shadow $transition-speed ease;
+
+		&:hover {
+			box-shadow: $border-2 0 0 10px;
+		}
 
 		@include bp-medium {
 			width: 48%;
+		}
+
+		&__link {
+			display: block;
+			padding: 20px 20px 60px 80px;
+
+			@include links {
+				text-decoration: none;
+				color: none;
+				transition: color $transition-speed ease;
+			}
 		}
 
 		&__icon {
@@ -58,18 +73,15 @@
 			font-size: $font-smallest;
 			font-weight: bold;
 			border-radius: 0 0 $radius $radius;
+			padding: 10px 15px 10px 25px;
+			display: flex;
+			justify-content: space-between;
+			box-sizing: border-box;
+
+			@include icon(18px, $alt-font-color-2, 0, 0);
 
 			@include bp-large {
 				margin: 0 -25px;
-			}
-
-			&__link {
-				display: block;
-				padding: 10px 15px 10px 25px;
-				display: flex;
-				justify-content: space-between;
-
-				@include icon(18px, $alt-font-color-2, 0, 0);
 			}
 		}
 	}
@@ -86,7 +98,10 @@
 			.action-cards__card {
 				width: 31.5%;
 				text-align: center;
-				padding: 35px 25px 70px 25px;
+
+				&__link {
+					padding: 35px 25px 70px 25px;
+				}
 			}
 		}
 	}
@@ -98,7 +113,10 @@
 			.action-cards__card {
 				width: 23.5%;
 				text-align: center;
-				padding: 35px 25px 70px 25px;
+
+				&__link {
+					padding: 35px 25px 70px 25px;
+				}
 			}
 		}
 	}

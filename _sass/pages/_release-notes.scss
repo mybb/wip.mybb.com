@@ -178,9 +178,7 @@
         &__link {
             font-size: $font-smallest;
 
-            @include links {
-                color: $alt-font-color-2;
-            }
+            @include icon(16px, $alt-font-color-2, 4px, 0);
         }
     }
 }
