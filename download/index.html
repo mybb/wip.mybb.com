@@ -14,7 +14,7 @@ redirect_from:
     <section class="download-block download-block--latest-version latest-version">
         <div class="wrapper">
             <h1 class="latest-version__title">Download MyBB to get your community rolling.</h1>
-            <div class="latest-version__download"><a href="{{ latest_version_first_location_url }}" class="latest-version__download__link button" data-no-instant>{% include icon.html icon='cloud-download' %} Download MyBB {{ latest_version.version_number }}</a></div>
+            <div class="latest-version__download"><a href="{{ latest_version_first_location_url }}" class="latest-version__download__link button button--invert" data-no-instant>{% include icon.html icon='cloud-download' %} Download MyBB {{ latest_version.version_number }}</a></div>
             <div class="latest-version__details">
                 <p class="latest-version__details__item latest-version__details__item--file-type">.{{ latest_version_first_format.type }}</p>
                 {% if latest_version_first_format.filesize %}<p class="latest-version__details__item latest-version__details__item--file-size">{{ latest_version_first_format.filesize }}</p>{% endif %}

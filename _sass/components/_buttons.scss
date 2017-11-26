@@ -44,6 +44,17 @@ a.button {
         border-color: $primary-color;
     }
 
+    &.button--invert {
+        background: $secondary-color;
+        border-color: $secondary-color;
+
+        &:hover,
+        &:active {
+            background-color: $secondary-color-dark;
+            border-color: $secondary-color-dark;
+        }
+    }
+
     @include bp-medium-max {
 
         &.button--full-width {
