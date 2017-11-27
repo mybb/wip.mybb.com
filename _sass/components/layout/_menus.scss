@@ -70,4 +70,32 @@
             }
         }
     }
-}
+    
+ 	&.section-menu--block {
+ 		float: none;
+ 		width: auto;
+ 		margin: 0 0 20px 0;
+ 		font-size: 1.1em;
+ 	}
+ 
+ 	&__links {
+ 
+ 		&__item {
+ 
+ 			&,
+ 			&:nth-child(odd),
+ 			&:nth-child(even) {
+ 				float: none;
+ 				width: 100%;
+ 				margin-#{$left}: 0;
+ 				margin-#{$right}: 0;
+ 			}
+ 
+ 			@include icon(18px, $primary-color, 8px, 2px);
+ 
+ 			&:hover, &:active, &.section-menu__links__item--active {
+ 				@include icon-fill($invert-font-color);
+ 			}
+ 		}
+ 	}
+ }
