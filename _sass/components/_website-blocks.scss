@@ -2,7 +2,6 @@
 	margin-bottom: 40px;
 
 	h1 {
-		// color: $primary-color;
 		color: $font-color;
 		font-weight: 600;
 		margin: 2em 0 0.5em 0;
@@ -15,7 +14,6 @@
 	}
 
 	h2 {
-		// color: $secondary-color;
 		color: $alt-font-color-4;
 		font-size: 1.2em;
 		font-family: $alt-font-stack;
@@ -23,13 +21,13 @@
 		margin: 0.5em 0 0.5em 0;
 	}
 
-	p {
-		margin: 0 0 20px 0;
-
-		&:last-child {
-			margin: 0;
-		}
-	}
+	// p {
+	// 	margin: 0 0 20px 0;
+    //
+	// 	&:last-child {
+	// 		margin: 0;
+	// 	}
+	// }
 
 	&__heading {
 		margin-bottom: 10px;
@@ -72,121 +70,5 @@
 	.github-buttons {
 		float: $right;
 		margin-top: 2px;
-	}
-}
-
-.section-menu {
-
-	&.section-menu--block {
-		float: none;
-		width: auto;
-		margin: 0 0 20px 0;
-		font-size: 1.1em;
-	}
-
-	&__links {
-
-		&__item {
-
-			&,
-			&:nth-child(odd),
-			&:nth-child(even) {
-				float: none;
-				width: 100%;
-				margin-#{$left}: 0;
-				margin-#{$right}: 0;
-			}
-
-			@include icon(18px, $primary-color, 8px, 2px);
-
-			&:hover, &:active, &.section-menu__links__item--active {
-				@include icon-fill($invert-font-color);
-			}
-		}
-	}
-}
-
-.sidebar__nav {
-
-	&__links {
-		list-style: none;
-		margin: -5px -6px 0 -6px;
-		padding: 0;
-
-		&__item {
-			margin: 0;
-			padding: 0;
-			font-size: 1.1em;
-			border-bottom: 1px solid $border-3;
-
-			&__link {
-				padding: 4px 6px;
-				display: block;
-			}
-
-			&.sidebar__nav__links__item--active {
-
-				.sidebar__nav__links__item__link {
-					color: $secondary-color;
-					font-weight: 700;
-				}
-			}
-
-			&:last-child {
-				border-bottom: none;
-			}
-		}
-	}
-}
-
-.team-list {
-	border-top: 2px solid $border-1;
-	margin-bottom: 30px;
-
-	&__member {
-		padding: 8px 12px;
-		border-bottom: 1px solid $border-1;
-
-		@include bp-large {
-			@include clearfix;
-		}
-
-		&__name {
-			color: $font-color;
-			font-weight: 700;
-			margin: 0;
-			padding: 0;
-			font-size: 0.9em;
-
-			@include bp-large {
-				float: $left;
-				width: 33%;
-			}
-		}
-
-		&--lead {
-
-			.team-list__member__name {
-				color: $secondary-color;
-			}
-		}
-
-		&__profile,
-		&__website {
-			display: inline-block;
-			font-size: 0.8em;
-			margin: side-values(0 10px 0 0);
-			@include icon(14px, $alt-font-color-2, 4px);
-
-			@include bp-large {
-				float: $left;
-				width: 33%;
-				margin: 0;
-			}
-
-			&__link {
-				color: $alt-font-color-1;
-			}
-		}
 	}
 }
