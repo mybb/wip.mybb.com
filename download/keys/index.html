@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 <section class="block">
-	<p><a href="{{ site.url }}/download/keys/protocol">Open the Release Signing Protocol &rarr;</a></p>
+	<p><a href="{{ site.baseurl }}/download/keys/protocol">Open the Release Signing Protocol &rarr;</a></p>
 </section>
 
 <section class="block">
@@ -37,7 +37,7 @@ redirect_from:
 					<tr>
 				  		<td>{{ key.username }}</td>
 				  		<td>{{ key.branches | join: '; ' }}</td>
-				  		<td><a href="{{ site.url }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
+				  		<td><a href="{{ site.baseurl }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
 						<td><a href="{{ key.add_announcement }}">{{ key.add_date | date_to_string }}</a></td>
 			  		</tr>
 				{% endfor %}
@@ -70,7 +70,7 @@ redirect_from:
 					<tr>
 				  		<td>{{ key.username }}</td>
 				  		<td>{{ key.branches | join: '; ' }}</td>
-				  		<td><a href="{{ site.url }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
+				  		<td><a href="{{ site.baseurl }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
 						<td><a href="{{ key.add_announcement }}">{{ key.add_date | date_to_string }}</a></td>
 						<td><a href="{{ key.remove_announcement }}">{{ key.remove_date | date_to_string }}</a></td>
 			  		</tr>
