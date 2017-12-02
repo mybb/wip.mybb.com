@@ -3,8 +3,8 @@
 
 	.wrapper {
 		padding: 20px 0;
-		margin-bottom: 40px;
-		border-bottom: 1px solid $border-1;
+		margin-bottom: 20px;
+		// border-bottom: 1px solid $border-1;
 		box-sizing: border-box;
 	}
 
@@ -18,8 +18,9 @@
 
 	&__description {
 		font-size: 1.3em;
+		line-height: 1.6em;
 		font-weight: 400;
 		color: $alt-font-color-1;
-		margin: 0 0 30px 0;
+		margin: 0 0 10px 0;
 	}
 }

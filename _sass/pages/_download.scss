@@ -143,3 +143,23 @@
     }
 
 }
+
+.sidebar-download {
+    margin-bottom: 30px;
+
+    &__button {
+        margin-bottom: 0;
+
+        .button {
+            display: block;
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    &__details {
+        text-align: center;
+        color: $alt-font-color-1;
+        font-size: $font-smallest;
+    }
+}

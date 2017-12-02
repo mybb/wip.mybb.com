@@ -5,7 +5,7 @@
     border-top: 1px solid $border-1;
 
     &__item {
-        padding: 12px;
+        padding: 12px 0;
         border-bottom: 1px solid $border-3;
 
         &__number {
@@ -28,6 +28,7 @@
         }
 
         &__date {
+            margin: 0;
             color: $alt-font-color-2;
             font-size: $font-smallest;
         }
