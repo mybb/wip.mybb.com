@@ -115,6 +115,11 @@ section: download
                     {% include icon.html icon='gear' %}
                     <p>Running the <strong>upgrade script</strong> is required.</p>
                 </div>
+            {% else %}
+                <div class="package-notes__note package-notes__note--important">
+                    {% include icon.html icon='gear' %}
+                    <p>The upgrade script does <strong>not</strong> need to be run when upgrading to this release with the Changed Files package.</p>
+                </div>
             {% endif %}
 
             {% if page.version_number contains '1.8.' %}
