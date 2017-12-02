@@ -192,7 +192,7 @@ section: download
             {% elsif page.changed_files %}
                 {% if page.changed_files.first %}
                     {% capture list_output %}
-                        {% include recursive_list.html list = page.changed_files parent_suffix = '/' %}
+                        {% include releases/recursive_list.html list = page.changed_files parent_suffix = '/' %}
                     {% endcapture %}
                     <section class="release-details__block">
                         <h1 class="release-details__block__title">Changed Files ({{ recursive_count }})</h1>
@@ -219,7 +219,7 @@ section: download
             {% elsif page.removed_files %}
                 {% if page.removed_files.first %}
                     {% capture list_output %}
-                        {% include recursive_list.html list = page.removed_files parent_suffix = '/' %}
+                        {% include releases/recursive_list.html list = page.removed_files parent_suffix = '/' %}
                     {% endcapture %}
                     <section class="release-details__block">
                         <h1 class="release-details__block__title">Removed Files ({{ recursive_count }})</h1>
