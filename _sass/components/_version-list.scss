@@ -19,14 +19,31 @@
         h2.version-list__item__number {
             margin: 0 10px 0 0;
             font-size: $font-regular;
-            display: inline-block;
+
+            @include bp-medium {
+                display: inline-block;
+            }
         }
 
         &__date {
-            margin: 0;
+            margin: 0 10px 0 0;
             color: $alt-font-color-2;
             font-size: $font-smallest;
+
+            @include bp-medium {
+                display: inline-block;
+            }
+        }
+
+        &__latest {
             display: inline-block;
+            margin: 0;
+            padding: 0 8px;
+            font-size: 13px;
+            background: $background-2;
+            border-radius: $radius;
+            text-transform: uppercase;
+            color: $alt-font-color-1;
         }
 
         &__type {

@@ -52,9 +52,10 @@ description: Here you will find a description of the MyBB versioning scheme and 
                             <div class="version-list__item__details">
                                 <h2 class="version-list__item__number"><a href="{{ version.version_number }}/" class="version-list__number__link">{{ version.version_number }}</a></h2>
                                 <p class="version-list__item__date">{{ version.release_date | date: '%e %B %Y' }}</p>
+                                {% if counter == 1 %}<p class="version-list__item__latest">Latest Release</p>{% endif %}
                                 <p class="version-list__item__type">{{ type }} Release</p>
                             </div>
-                            <p class="version-list__item__download"><a href="{{ version.version_number }}/" class="button{% if counter > 1 %} button--secondary{% else %}{% endif %} version-list__item__download__link">Download</a></p>
+                            <p class="version-list__item__download"><a href="{{ version.version_number }}/" class="button{% if counter > 1 %} button--secondary{% endif %} version-list__item__download__link">Download</a></p>
                         </div>
                         {% assign counter = counter | plus: 1 %}
                     {% endif %}
