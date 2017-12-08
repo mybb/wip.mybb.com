@@ -50,28 +50,26 @@
                 border-radius: 4px;
             }
 
-            .fa {
-                margin-right: 5px;
+            @include icon(16px, $alt-font-color-2, 5px, 0);
+
+            &.card__role--management {
+                @include icon-fill(#00aa00);
             }
 
-            &.card__role--management .fa {
-                color: #00aa00;
+            &.card__role--support {
+                @include icon-fill(#ff0000);
             }
 
-            &.card__role--support .fa {
-                color: #ff0000;
+            &.card__role--development {
+                @include icon-fill(#e34976);
             }
 
-            &.card__role--development .fa {
-                color: #e34976;
+            &.card__role--quality-assurance {
+                @include icon-fill(#880063);
             }
 
-            &.card__role--quality-assurance .fa {
-                color: #880063;
-            }
-
-            &.card__role--community .fa {
-                color: #095c66;
+            &.card__role--community {
+                @include icon-fill(#095c66);
             }
         }
 
@@ -79,11 +77,6 @@
             margin: 0;
             font-size: 0.9em;
             display: inline-block;
-
-            .fa {
-                margin-right: 3px;
-                font-size: 20px;
-            }
 
             &__title {
                 @include visually-hidden;
@@ -96,8 +89,12 @@
                 margin: 0;
                 padding: 0;
 
+                @include icon(20px, $alt-font-color-2, 0, 0) {
+                    margin: 0 5px;
+                }
+
                 &:hover, &:active {
-                    color: #ff7500;
+                    @include icon-fill($secondary-color);
                 }
             }
 

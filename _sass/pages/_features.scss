@@ -59,7 +59,7 @@
 						@include icon(32px, $invert-font-color, auto, auto) {
 							display: block;
 							margin-bottom: 4px;
-							opacity: 0.7;
+							opacity: 0.6;
 						}
 
 						&:hover,
@@ -69,6 +69,18 @@
 						}
 
 						font-size: 0.9em;
+					}
+
+					&--active {
+
+						.feature-tour__header__nav__links__item__link {
+							font-weight: bold;
+							@include black-transparency(0.25, background);
+
+							@include icon(32px, $invert-font-color, auto, auto) {
+								opacity: 1;
+							}
+						}
 					}
 				}
 			}
