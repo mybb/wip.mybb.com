@@ -86,7 +86,7 @@ description: Here you will find a description of the MyBB versioning scheme and 
                         <p class="version-list__item__type">{{ version.type }}</p>
                     </div>
                     {% if version.availability %}
-                        <p class="version-list__item__download"><a href="{{ version.availability }}/" class="button button--secondary version-list__item__download__link">Download</a></p>
+                        <p class="version-list__item__download"><a href="{{ version.availability }}" class="button button--secondary version-list__item__download__link">Download</a></p>
                     {% endif %}
                 </div>
                 {% endfor %}
