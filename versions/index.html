@@ -55,7 +55,7 @@ description: Here you will find a description of the MyBB versioning scheme and 
                                 {% if counter == 1 %}<p class="version-list__item__latest">Latest Release</p>{% endif %}
                                 <p class="version-list__item__type">{{ type }} Release</p>
                             </div>
-                            <p class="version-list__item__download"><a href="{{ site.baseurl }}/{{ version.version_number }}/" class="button{% if counter > 1 %} button--secondary{% endif %} version-list__item__download__link">Download</a></p>
+                            <p class="version-list__item__download"><a href="{{ site.baseurl }}/versions/{{ version.version_number }}/" class="button{% if counter > 1 %} button--secondary{% endif %} version-list__item__download__link">Download</a></p>
                         </div>
                         {% assign counter = counter | plus: 1 %}
                     {% endif %}
@@ -79,7 +79,7 @@ description: Here you will find a description of the MyBB versioning scheme and 
                                 <a href="{{ version.release_notes }}" class="version-list__number__link">{{ version.version }}</a>
                                 {% endif %}
                             {% else %}
-                            <a href="{{ site.baseurl }}/{{ version.version }}/" class="version-list__number__link">{{ version.version }}</a>
+                            <a href="{{ site.baseurl }}/versions/{{ version.version }}/" class="version-list__number__link">{{ version.version }}</a>
                             {% endif %}
                         </h2>
                         <p class="version-list__item__date">{{ version.date }}</p>
