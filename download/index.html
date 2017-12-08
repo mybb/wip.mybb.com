@@ -14,7 +14,7 @@ redirect_from:
     <section class="download-block download-block--latest-version latest-version">
         <div class="wrapper">
             <h1 class="latest-version__title">Download MyBB to get your community rolling.</h1>
-            <div class="latest-version__download"><a href="{{ latest_version_first_location_url }}" class="latest-version__download__link button button--invert" data-no-instant>{% include icon.html icon='cloud-download' %} Download MyBB {{ latest_version.version_number }}</a></div>
+            <div class="latest-version__download"><a href="{{ latest_version_first_location_url }}" class="latest-version__download__link button button--invert" data-no-instant>{% include icon.html icon='download' %} Download MyBB {{ latest_version.version_number }}</a></div>
             <div class="latest-version__details">
                 <p class="latest-version__details__item latest-version__details__item--file-type">.{{ latest_version_first_format.type }}</p>
                 {% if latest_version_first_format.filesize %}<p class="latest-version__details__item latest-version__details__item--file-size">{{ latest_version_first_format.filesize }}</p>{% endif %}
@@ -22,9 +22,9 @@ redirect_from:
                 <p class="latest-version__details__item latest-version__details__item--release-type">{{ latest_version_types_amp }} release</p>
             </div>
             <div class="latest-version__actions">
-                <p class="latest-version__actions__item"><a href="{{ site.baseurl }}/versions/{{ latest_version.version_number }}/" class="latest-version__actions__item__link">{% include icon.html icon='info' %} <span>Release notes, upgrading, verifying</span></a></p>
+                <p class="latest-version__actions__item"><a href="{{ site.baseurl }}/versions/{{ latest_version.version_number }}/" class="latest-version__actions__item__link">{% include icon.html icon='info-circle' %} <span>Release notes, upgrading, verifying</span></a></p>
                 <p class="latest-version__actions__item"><a href="https://docs.mybb.com/1.8/install/" class="latest-version__actions__item__link">{% include icon.html icon='book' %} <span>Installation Guide</span></a></p>
-                <p class="latest-version__actions__item"><a href="https://community.mybb.com/forum-175.html" class="latest-version__actions__item__link">{% include icon.html icon='question' %} <span>Support Forums</span></a>
+                <p class="latest-version__actions__item"><a href="https://community.mybb.com/forum-175.html" class="latest-version__actions__item__link">{% include icon.html icon='question-circle' %} <span>Support Forums</span></a>
             </div>
         </div>
     </section>
@@ -33,7 +33,7 @@ redirect_from:
             <h2 class="download-block--connect__title">Connect with MyBB</h2>
             <p class="download-block--connect__description">Stay on top of what's happening.</p>
             <div class="social-buttons">
-                <div class="social-buttons__button social-buttons__button--blog"><a href="https://blog.mybb.com/follow/" class="button button--secondary button--primary-border">{% include icon.html icon='mail' %} Subscribe to Blog</a></div>
+                <div class="social-buttons__button social-buttons__button--blog"><a href="https://blog.mybb.com/follow/" class="button button--secondary button--primary-border">{% include icon.html icon='envelope' %} Subscribe to Blog</a></div>
                 <div class="social-buttons__button social-buttons__button--twitter"><a href="https://twitter.com/MyBB?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @MyBB</a></div>
                 <div class="social-buttons__button social-buttons__button--twitter"><a href="https://twitter.com/MyBBSecurity?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @MyBBSecurity</a></div>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -54,7 +54,7 @@ redirect_from:
 				</div>
                 <div class="action-cards__card">
                     <a href="https://community.mybb.com/mods.php?action=browse&category=19" class="action-cards__card__link">
-    					<span class="action-cards__card__icon">{% include icon.html icon='organization' %}</span>
+    					<span class="action-cards__card__icon">{% include icon.html icon='language' %}</span>
     					<h3 class="action-cards__card__title">Translations</h3>
     					<p class="action-cards__card__description">MyBB comes with an English language pack; however, the MyBB Community has also produced a large number of translations for visitors who don't speak English, including right-to-left languages.</p>
     					<p class="action-cards__card__action"><span>Browse translations</span> {% include icon.html icon='arrow-right' %}</p>
@@ -62,7 +62,7 @@ redirect_from:
 				</div>
                 <div class="action-cards__card">
                     <a href="https://community.mybb.com/mods.php" class="action-cards__card__link">
-    					<span class="action-cards__card__icon">{% include icon.html icon='gear' %}</span>
+    					<span class="action-cards__card__icon">{% include icon.html icon='cogs' %}</span>
     					<h3 class="action-cards__card__title">Extend MyBB</h3>
     					<p class="action-cards__card__description">Plugins and themes let you make your MyBB forum your own. Plugins add new features to MyBB, and take just a few clicks to install. Themes give your discussion board a distinctive feel.</p>
     					<p class="action-cards__card__action"><span>Visit Extend MyBB</span> {% include icon.html icon='arrow-right' %}</p>

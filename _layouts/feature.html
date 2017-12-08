@@ -37,7 +37,7 @@
                         <div class="wrapper">
                             {% if forloop.last %}
                                 <span class="feature-tour__next__text">Ready to get started?</span>
-                                <a href="{{ site.baseurl }}/download" class="button button--medium feature-tour__next__link">{% include icon.html icon='cloud-download' %}Download MyBB</a>
+                                <a href="{{ site.baseurl }}/download" class="button button--medium feature-tour__next__link">{% include icon.html icon='download' %}Download MyBB</a>
                             {% else %}
                                 {% assign next = forloop.index0 | plus: 1 %}
                                 {% assign next_page = site.data.features[next] | prepend:"/features/" | append:"/" %}

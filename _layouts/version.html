@@ -102,7 +102,7 @@ section: download
                 {% endfor %}
             </div>
             <p class="download-packages__verifying-note">
-                <a href="{{ site.baseurl }}/download/verifying/" class="download-packages__verifying-note__link">{% include icon.html icon='checklist' %} <span>How to verify packages</span></a>
+                <a href="{{ site.baseurl }}/download/verifying/" class="download-packages__verifying-note__link">{% include icon.html icon='check-circle' %} <span>How to verify packages</span></a>
             </p>
         {% endif %}
     </div>
@@ -112,12 +112,12 @@ section: download
             <h2 class="package-notes__title">Important Notes</h2>
             {% if page.upgrade_script_required %}
                 <div class="package-notes__note package-notes__note--important">
-                    {% include icon.html icon='gear' %}
+                    {% include icon.html icon='cogs' %}
                     <p>Running the <strong>upgrade script</strong> is required.</p>
                 </div>
             {% else %}
                 <div class="package-notes__note package-notes__note--important">
-                    {% include icon.html icon='gear' %}
+                    {% include icon.html icon='cogs' %}
                     <p>The upgrade script does <strong>not</strong> need to be run when upgrading to this release with the Changed Files package.</p>
                 </div>
             {% endif %}
@@ -132,7 +132,7 @@ section: download
 
             {% if page.comment %}
                 <div class="package-notes__note package-notes__note--comment">
-                    {% include icon.html icon='quote' %}
+                    {% include icon.html icon='quote-left' %}
                     {{ page.comment | markdownify }}
                 </div>
             {% endif %}
@@ -172,7 +172,7 @@ section: download
             <section class="release-details__block">
                 <h1 class="release-details__block__title">Issues resolved ({{ page.resolved_issues_number }})</h1>
                 {% if page.resolved_issues_link %}
-                    <a href="{{ page.resolved_issues_link }}" class="button button--medium button--no-margin">{% include icon.html icon='mark-github' %} View issues on GitHub</a>
+                    <a href="{{ page.resolved_issues_link }}" class="button button--medium button--no-margin">{% include icon.html icon='github' %} View issues on GitHub</a>
                 {% endif %}
                 {% if page.resolved_issues %}
                     <ul>

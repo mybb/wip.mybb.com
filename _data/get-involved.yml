@@ -6,7 +6,7 @@
   icon: book
 - url: get-involved/support
   title: Support
-  icon: question
+  icon: question-circle
 - url: get-involved/security
   title: Security Research
   icon: bug

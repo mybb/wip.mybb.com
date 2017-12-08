@@ -4,7 +4,7 @@ section: features
 
 title: Users
 meta_description: Features to keep your users engaged and active.
-icon: organization
+icon: users
 
 redirect_from:
 - /features/09-reputation/

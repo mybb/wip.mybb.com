@@ -1,12 +1,12 @@
 - url: about
   title: About MyBB
-  icon: info
+  icon: info-circle
 - url: about/team
   title: About the Team
-  icon: organization
+  icon: users
 - url: about/conduct
   title: Code of Conduct
-  icon: pin
+  icon: thumbtack
 - url: about/rfcs
   title: RFC Documents
   icon: book
@@ -15,7 +15,7 @@
   icon: globe
 - url: contact
   title: Contact Us
-  icon: mail
+  icon: envelope
 - url: about/donations
   title: Donate
-  icon: zap
+  icon: dollar-sign

@@ -4,7 +4,7 @@ section: features
 
 title: Discussions
 meta_description: Infinite possibilities arise from every conversation on your forum.
-icon: comment-discussion
+icon: comments
 
 redirect_from:
 - /features/07-threads-posts-and-polls/
