@@ -48,6 +48,7 @@
                 background: $background-default;
                 display: inline-block;
                 border-radius: 4px;
+                box-shadow: $border-3 0 0 3px;
             }
 
             @include icon(16px, $alt-font-color-2, 5px, 0);
