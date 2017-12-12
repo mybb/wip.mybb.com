@@ -1,9 +1,11 @@
 $(function() {
+    // Tooltips
     $(".card__detail__link").powerTip({
         placement: "s",
         mouseOnToPopup: true
     })
 
+    // Header menu button
     $(".menu-button").click(function () {
         $(".main-menu").removeClass("main-menu--mobile-hide").addClass("main-menu--mobile-show");
         $(".menu-button").addClass("menu-button--hide");
@@ -15,4 +17,24 @@ $(function() {
         $(".menu-button").removeClass("menu-button--hide");
         $(".menu-close-button").addClass("menu-close-button--hide");
     });
+
+    // Feature tour menu button
+    $(".feature-tour__menu-button").click(function () {
+        $(".feature-tour__header__nav").removeClass("feature-tour__header__nav--mobile-hide").addClass("feature-tour__header__nav--mobile-show");
+        $(".feature-tour__menu-button").addClass("feature-tour__menu-button--hide");
+        $(".feature-tour__menu-close-button").removeClass("feature-tour__menu-close-button--hide");
+    });
+
+    $(".feature-tour__menu-close-button").click(function () {
+        $(".feature-tour__header__nav").removeClass("feature-tour__header__nav--mobile-show").addClass("feature-tour__header__nav--mobile-hide");
+        $(".feature-tour__menu-button").removeClass("feature-tour__menu-button--hide");
+        $(".feature-tour__menu-close-button").addClass("feature-tour__menu-close-button--hide");
+    });
 });
+
+// Headroom
+var myElement = document.querySelector("header");
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(myElement);
+// initialise
+headroom.init();

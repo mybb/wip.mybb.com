@@ -1,10 +1,39 @@
+.main--feature-tour {
+	padding: 30px 0;
+}
+
 .feature-tour {
+
+	.wrapper {
+		position: relative;
+	}
+
+	&__menu-button,
+	&__menu-close-button {
+		@include icon(24px, $invert-font-color, 5px, 0);
+		color: $invert-font-color;
+		position: absolute;
+		top: 100px;
+        right: 5px;
+        padding: 10px 10px;
+		@include black-transparency(0.1, background);
+		border-radius: $radius;
+		cursor: pointer;
+
+		&--hide {
+			display: none;
+		}
+
+		@include bp-medium {
+			display: none;
+		}
+	}
 
 	&__header {
 		background: $primary-color;
 
 		.wrapper {
-			padding: 10px 0;
+			padding: 90px 0 10px 0;
 		}
 
 		&__title {
@@ -14,6 +43,20 @@
 		}
 
 		&__nav {
+
+			&--mobile-hide {
+
+				@include bp-medium-max {
+					display: none;
+				}
+			}
+
+			&--mobile-show {
+
+				@include bp-medium-max {
+					display: block;
+				}
+			}
 
 			&__links {
 				list-style: none;
@@ -29,14 +72,6 @@
 					flex-grow: 1;
 					box-sizing: border-box;
 					flex-basis: 50%;
-
-					&:first-child {
-						padding-left: 0;
-					}
-
-					&:last-child {
-						padding-right: 0;
-					}
 
 					@include bp-medium {
 						flex-basis: 25%;

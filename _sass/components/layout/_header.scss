@@ -1,5 +1,10 @@
 .header {
     background: $dark-background-1;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
 
     @include bp-medium {
         display: flex;
@@ -163,4 +168,15 @@
         }
 
     }
+}
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
 }
