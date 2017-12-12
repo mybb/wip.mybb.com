@@ -1,2 +1,8 @@
 _site/
+Gemfile
+Gemfile.lock
+_local_config.yml
+.jekyll-metadata
 .sass-cache/
+key_public.pem
+key_private.key
