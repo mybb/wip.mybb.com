@@ -141,7 +141,8 @@ section: download
     {% endif %}
     <div class="release-details">
         <div class="wrapper">
-            {% if resolved_security_issues_number %}
+            {% assign resolved_security_issues_number = resolved_security_issues_number | plus:0 %}
+            {% if resolved_security_issues_number > 0 %}
             <section class="release-details__block">
                 <h1 class="release-details__block__title">Security vulnerabilities addressed ({{ resolved_security_issues_number }})</h1>
                 {% if page.resolved_security_issues %}
@@ -258,12 +259,12 @@ section: download
 
             {% assign contentStripped = page.content | strip %}
 
-            </div>
-
             {% if contentStripped != '' %}
-                <hr>
-                {{ page.content }}
+                <section class="release-details__block block block--markdown">
+                    {{ page.content }}
+                </section>
             {% endif %}
+            </div>
         </div>
     </div>
 </article>

@@ -109,7 +109,7 @@
 					&--active {
 
 						.feature-tour__header__nav__links__item__link {
-							font-weight: bold;
+							// font-weight: bold;
 							@include black-transparency(0.25, background);
 
 							@include icon(32px, $invert-font-color, auto, auto) {
