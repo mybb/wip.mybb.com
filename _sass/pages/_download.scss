@@ -53,6 +53,27 @@
             font-size: 1.8em;
         }
     }
+
+    &--previous-versions {
+
+        &__title {
+            font-family: $alt-font-stack;
+            font-weight: normal;
+            font-size: 1.5em;
+            margin: 20px 0 10px 0;
+        }
+
+        &__description {
+            color: $alt-font-color-1;
+			font-size: 1.1em;
+			margin: 0;
+			padding: 0;
+        }
+
+        &__button .button {
+            margin: 20px 0;
+        }
+    }
 }
 
 .latest-version {
