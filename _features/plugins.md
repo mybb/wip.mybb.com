@@ -21,6 +21,11 @@ MyBB's plugin system allows for more than just the running of code through hooks
 # Check for updates to plugins from the control panel
 We've built directly in to the MyBB Control Panel the ability for users to check that they're running the latest versions of the plugins they have installed. This means no longer hunting around several websites to check that you have the latest version.
 
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/plugins/plugins.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/plugins/plugins.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>
 
 <p class="note">
 	Developers: When submitting to <a href="https://community.mybb.com/mods.php">MyBB Mods</a>, plugins are provided with their own GUID (a unique identifier) for version checking. To implement version checking support in to your plugin, it's as simple as including this GUID and having your plugin listed on MyBB Mods.</p>

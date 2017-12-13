@@ -17,9 +17,21 @@ Moderation of posts and threads in MyBB is easy: with inline moderation, just se
 
 MyBB offers and advanced set of thread and post moderation option known as custom moderator tools. These custom mod tools are essentially moderation macros, allowing you to define a number of actions to be performed at once. Mod tools are used just like all included moderation actions: from both individual thread moderation and inline moderation. Mod tools can even be defined to only be allowed on certain forums, giving you the ability to create an advanced set of tools specific to your board.
 
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/moderation/custom-mod-tools.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/moderation/custom-mod-tools.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>
+
 ## Delayed moderation
 
 With delayed moderation introduced in MyBB 1.6, you can set any thread moderation tool - default or custom - to be performed after a certain number of days. You can perform delayed moderation on just one thread or several, and actions can be queued to allow a whole set of moderation actions to occur at just the right time. From closing a thread to making a copy of one, every tool can now be queued with delayed moderation.
+
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/moderation/delayed-moderation.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/moderation/delayed-moderation.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>
 
 # Built-in Moderator Control Panel
 
@@ -34,6 +46,12 @@ Using the built-in moderator control panel in MyBB, forum staff can assist with 
 * View Warning Logs - Moderators can see a history/log of warnings given to a particular user by other forum staff
 * IP Searching - Moderators can search for a specific IP address and return any users or posts that match
 
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/moderation/modcp.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/moderation/modcp.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>
+
 # Comprehensive warning system
 
 MyBB includes an advanced set of controls that allow you to warn users for inappropriate behavior on your forums. The MyBB warning system also allows for automatic action based on the user's warning level, as set by the forum administrator.
@@ -44,9 +62,28 @@ You can warn a user from posts of theirs or from their profile. Moderators can c
 
 If enabled, users see a listing of recent warnings in their User Control Panel.
 
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/moderation/warn-user.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/moderation/warn-user.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>
+
 ## Pre-defined warning types
 From the Admin Control Panel, you can set up pre-defined warning types for your staff to choose from. This includes setting the number of points to give for the warning and the length of time before those points expire.
+
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/moderation/warning-types.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/moderation/warning-types.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>
 
 ## Automatic actions at set warning levels
 
 As part of the warning system, actions can be taken automatically when a user reaches a pre-defined warning level. This includes post moderation, suspension of posting privileges, and a temporary or permanent ban.
+
+
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/moderation/warning-levels.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/moderation/warning-levels.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>

@@ -106,6 +106,27 @@
 		}
 	}
 
+	&__screenshot {
+		text-align: center;
+		margin: 35px 0;
+
+		&__link {
+
+		}
+
+		&__image {
+			border: 1px solid $border-2;
+			padding: 10px;
+			border-radius: $radius;
+			box-sizing: border-box;
+			max-width: 100%;
+
+			@include bp-medium {
+				max-width: 90%;
+			}
+		}
+	}
+
 	&__next {
 		background: $background-2;
 

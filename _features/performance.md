@@ -55,5 +55,18 @@ This includes things like:
 * Sending out mass-emails and newsletters
 * Lifting expired user account bans and suspensions
 
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/performance/tasks.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/performance/tasks.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>
+
 ## View when a task was run & what it actually did
 It's great that there’s a lot of automation happening behind the scenes but how can you tell that it's actually working? MyBB will let you know when a task was last run, when it is next due to run and also keeps a complete history when a task was run and if it was successful or not.
+
+
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/performance/tasklog.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/performance/tasklog.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>
