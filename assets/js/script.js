@@ -1,3 +1,5 @@
+$('html').addClass('js');
+
 $(function() {
     // Tooltips
     $(".card__detail__link").powerTip({

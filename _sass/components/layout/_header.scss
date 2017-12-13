@@ -1,10 +1,5 @@
 .header {
     background: $dark-background-1;
-    position: fixed;
-    z-index: 10;
-    right: 0;
-    left: 0;
-    top: 0;
 
     @include bp-medium {
         display: flex;
@@ -35,57 +30,14 @@
         position: relative;
     }
 
-    .menu-button {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 24px 15px;
-        cursor: pointer;
-        @include icon(30px, $invert-font-color);
-
-        &.menu-button--hide {
-            display: none;
-        }
-
-        @include bp-medium {
-            display: none;
-        }
-    }
-
+    .menu-button,
     .menu-close-button {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 24px 15px;
-        cursor: pointer;
-        @include icon(30px, $invert-font-color);
-
-        &.menu-close-button--hide {
-            display: none;
-        }
-
-        @include bp-medium {
-            display: none;
-        }
+        display: none;
     }
 }
 
 .main-menu {
     height: 100%;
-
-    &.main-menu--mobile-hide {
-
-        @include bp-medium-max {
-            display: none;
-        }
-    }
-
-    &.main-menu--mobile-show {
-
-        @include bp-medium-max {
-            display: block;
-        }
-    }
 
     &__links {
         height: 100%;
@@ -167,6 +119,53 @@
             }
         }
 
+    }
+}
+
+.js {
+
+    .header {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        left: 0;
+        top: 0;
+
+        .menu-button,
+        .menu-close-button {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 24px 15px;
+            cursor: pointer;
+            @include icon(30px, $invert-font-color);
+
+            &--hide {
+                display: none;
+            }
+
+            @include bp-medium {
+                display: none;
+            }
+        }
+    }
+
+    .main-menu {
+
+        &.main-menu--mobile-hide {
+
+            @include bp-medium-max {
+                display: none;
+            }
+        }
+
+        &.main-menu--mobile-show {
+
+            @include bp-medium-max {
+                display: block;
+            }
+        }
     }
 }
 

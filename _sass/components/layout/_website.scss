@@ -80,7 +80,7 @@ textarea {
 }
 
 .main {
-    padding: 100px 0 30px 0;
+    padding: 20px 0 30px 0;
 
     .wrapper {
     	padding: 0;
@@ -133,4 +133,8 @@ textarea {
             }
         }
     }
+}
+
+.js .main {
+    padding-top: 100px;
 }
