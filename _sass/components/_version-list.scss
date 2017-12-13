@@ -53,3 +53,9 @@
         }
     }
 }
+
+.version-list-eol-note {
+    @include note($background-2);
+    border-color: $danger-color;
+    @include icon-fill($danger-color);
+}

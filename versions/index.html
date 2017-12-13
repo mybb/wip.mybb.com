@@ -34,9 +34,7 @@ description: Here you will find a description of the MyBB versioning scheme and 
             <header class="block__heading">
                 <h1 class="block__heading__title">Version List</h1>
             </header>
-            <p>The following is a list of official (public and private) releases of MyBB from the MyBB Group.</p>
-            <p>Download links are provided on this page for older versions for non-production-site usage (i.e. porting old modifications, converting to MyBB, looking at what MyBB was back then, etc).</p>
-            <p><strong>Official support is <em>not</em> provided for these old versions, and if you choose to use them, you do so at your own risk - most of the old versions have known bugs or exploits.  The MyBB Group implores all administrators to use the latest version of MyBB for production sites.</strong></p>
+            <p>The following is a list of official (public and private) releases of MyBB. Download links for previous versions are provided on this page for older versions for non-production site usage (i.e. porting old modifications, converting to MyBB, and historical curiosity). <strong>All administrators are strongly encouraged to use the latest release of MyBB on production forums.</strong></p>
         </section>
         <section class="block">
             <header class="block__heading">
@@ -60,6 +58,18 @@ description: Here you will find a description of the MyBB versioning scheme and 
                         {% assign counter = counter | plus: 1 %}
                     {% endif %}
                 {% endfor %}
+            </div>
+        </section>
+        <section class="block">
+            <div class="version-list-eol-note">
+                {% include icon.html icon='exclamation-triangle' %}
+                <p><strong>Versions prior to MyBB 1.8.0 are no longer supported.</strong></p>
+                {% if eol.text %}
+                    <p>{{ eol.text | markdownify }}</p>
+                {% endif %}
+                <p>
+                    This means there will be no more security or maintenance releases for these series and forums running these versions of MyBB may be at risk of unfixed security issues. <strong>All administrators are strongly encouraged to upgrade their forums to the latest release of MyBB as soon as possible.</strong>
+                </p>
             </div>
         </section>
         {% for series in site.data.legacy_versions %}
