@@ -44,6 +44,11 @@ a.button {
         border-color: $primary-color;
     }
 
+    &.button--default-background-border {
+        border-color: $background-default;
+        box-shadow: $border-1 0 0 3px;
+    }
+
     &.button--invert {
         background: $secondary-color;
         border-color: $secondary-color;
