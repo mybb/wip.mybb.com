@@ -1,7 +1,8 @@
 .block {
 	margin-bottom: 40px;
 
-	&--markdown {
+	&--markdown,
+	&--basic {
 
 		h1 {
 			color: $font-color;

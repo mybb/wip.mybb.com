@@ -2,7 +2,7 @@
 layout: default
 section: home
 title: Team groups
-description: Take a look what focus groups the MyBB Team consists of.
+description: While the MyBB team is divided into separate groups below, these groups represent only primary tasks. Each member of the MyBB team is charged with pushing the MyBB project forward in any way they see fit.
 meta_description: Take a look what focus groups the MyBB Team consists of.
 ---
 
@@ -20,11 +20,12 @@ meta_description: Take a look what focus groups the MyBB Team consists of.
 
 <div class="page-content page-content--sidebar">
 	<section class="block">
-        <p>While the MyBB team is divided into separate groups below, these groups represent only primary tasks. Each member of the MyBB team is charged with pushing the MyBB project forward in any way they see fit.</p>
-
+		<header class="block__heading">
+			<h1 class="block__heading__title">MyBB Team Groups</h1>
+		</header>
 		<div class="simple-table role role--management">
 			<div class="simple-table__heading">
-				<i class="fa fa-briefcase"></i>
+				{% include icon.html icon='briefcase' %}
 				<p class="simple-table__heading__subtitle">MAN</p>
 			</div>
 			<div class="simple-table__content">
@@ -33,7 +34,7 @@ meta_description: Take a look what focus groups the MyBB Team consists of.
 		</div>
 		<div class="simple-table role role--support">
 			<div class="simple-table__heading">
-				<i class="fa fa-question-circle"></i>
+				{% include icon.html icon='question-circle' %}
 				<p class="simple-table__heading__subtitle">SUP</p>
 			</div>
 			<div class="simple-table__content">
@@ -42,7 +43,7 @@ meta_description: Take a look what focus groups the MyBB Team consists of.
 		</div>
 		<div class="simple-table role role--development">
 			<div class="simple-table__heading">
-				<i class="fa fa-cogs"></i>
+				{% include icon.html icon='cogs' %}
 				<p class="simple-table__heading__subtitle">DEV</p>
 			</div>
 			<div class="simple-table__content">
@@ -51,7 +52,7 @@ meta_description: Take a look what focus groups the MyBB Team consists of.
 		</div>
 		<div class="simple-table role role--quality-assurance">
 			<div class="simple-table__heading">
-				<i class="fa fa-flask"></i>
+				{% include icon.html icon='flask' %}
 				<p class="simple-table__heading__subtitle">SQA</p>
 			</div>
 			<div class="simple-table__content">
@@ -60,7 +61,7 @@ meta_description: Take a look what focus groups the MyBB Team consists of.
 		</div>
 		<div class="simple-table role role--community">
 			<div class="simple-table__heading">
-				<i class="fa fa-group"></i>
+				{% include icon.html icon='users' %}
 				<p class="simple-table__heading__subtitle">COM</p>
 			</div>
 			<div class="simple-table__content">
