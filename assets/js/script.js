@@ -32,6 +32,16 @@ $(function() {
         $(".feature-tour__menu-button").removeClass("feature-tour__menu-button--hide");
         $(".feature-tour__menu-close-button").addClass("feature-tour__menu-close-button--hide");
     });
+
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 500);
+        }
+    });
 });
 
 // Headroom
