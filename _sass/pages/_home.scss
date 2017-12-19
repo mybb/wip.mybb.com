@@ -88,6 +88,10 @@
 		.wrapper {
 			border-bottom: 1px dashed $border-2;
 		}
+
+		&__subtitle {
+			margin: 0 0 10px 0;
+		}
 	}
 
 	&--download {
