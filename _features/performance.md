@@ -33,7 +33,7 @@ MyBB also contains built-in support for master/slave replication support. Larger
 
 # Built for speed
 
-Working closely with some of the largest forums on the web, we have determined some of the bottlenecks in previous versions of MyBB and completely eradicated them, allowing MyBB to handle larger sized forums than were previously possible. With the introduction of new cache handlers, improve debugging information, and the removal of unnecessary queries, we're proud to say MyBB is still one of the fastest yet feature rich forum solutions available today.
+Working closely with some of the largest forums on the web, we have determined some of the bottlenecks in previous versions of MyBB and completely eradicated them, allowing MyBB to handle larger sized forums than were previously possible. With the introduction of new cache handlers, improved debugging information, and the removal of unnecessary queries, we're proud to say that MyBB is still one of the fastest, yet feature rich forum solutions available today.
 
 ## Built-in support for eAccelerator, APC, memcached and X-Cache caching
 
