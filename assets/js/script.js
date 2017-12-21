@@ -66,10 +66,12 @@ $(function() {
 
     $('.main-feature__screenshots__nav--next').click(function() {
         owl.trigger('next.owl.carousel');
-    })
+    });
     $('.main-feature__screenshots__nav--previous').click(function() {
         owl.trigger('prev.owl.carousel');
-    })
+    });
+
+    $('.feature-tour__screenshot__link').featherlight();
 });
 
 // Headroom
