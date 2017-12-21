@@ -47,9 +47,10 @@ $(function() {
     owl.owlCarousel({
         loop:true,
         nav:false,
-        // autoplay:true,
-        // autoplayTimeout:3000,
-        // autoplayHoverPause:true,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        autoplaySpeed:700,
         dots:false,
         responsive:{
             0:{
