@@ -42,6 +42,34 @@ $(function() {
             }, 500);
         }
     });
+
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        loop:true,
+        nav:false,
+        // autoplay:true,
+        // autoplayTimeout:3000,
+        // autoplayHoverPause:true,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            900:{
+                items:3
+            }
+        }
+    });
+
+    $('.main-feature__screenshots__nav--next').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    $('.main-feature__screenshots__nav--previous').click(function() {
+        owl.trigger('prev.owl.carousel');
+    })
 });
 
 // Headroom
