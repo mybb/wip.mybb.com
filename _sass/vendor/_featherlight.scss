@@ -160,3 +160,55 @@
 		display: none;
 	}
 }
+
+
+/**
+ * Featherlight Loader
+ *
+ * Copyright 2015, WP Site Care http://www.wpsitecare.com
+ * MIT Licensed.
+ */
+@-webkit-keyframes featherlightLoader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes featherlightLoader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+.featherlight-loading .featherlight-content {
+  -webkit-animation: featherlightLoader 1s infinite linear;
+          animation: featherlightLoader 1s infinite linear;
+  background: transparent;
+  border: 8px solid #8f8f8f;
+  border-left-color: #fff;
+  border-radius: 80px;
+  width: 80px;
+  height: 80px;
+  min-width: 0;
+}
+
+.featherlight-loading .featherlight-content > * {
+  display: none !important;
+}
+
+.featherlight-loading .featherlight-close,
+.featherlight-loading .featherlight-inner {
+  display: none;
+}
