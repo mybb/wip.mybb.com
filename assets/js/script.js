@@ -13,6 +13,7 @@ $(function() {
         $(".site-search").removeClass("site-search--mobile-hide").addClass("site-search--mobile-show");
         $(".menu-button").addClass("menu-button--hide");
         $(".menu-close-button").removeClass("menu-close-button--hide");
+        $(".headroom").addClass("headroom--disabled");
     });
 
     $(".menu-close-button").click(function () {
@@ -20,6 +21,7 @@ $(function() {
         $(".site-search").removeClass("site-search--mobile-show").addClass("site-search--mobile-hide");
         $(".menu-button").removeClass("menu-button--hide");
         $(".menu-close-button").addClass("menu-close-button--hide");
+        $(".headroom").removeClass("headroom--disabled");
     });
 
     $(".main-menu__links__item--search__icon").click(function () {

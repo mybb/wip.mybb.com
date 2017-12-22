@@ -277,4 +277,8 @@
 }
 .headroom--unpinned {
     transform: translateY(-100%);
+
+    &.headroom--disabled {
+        transform: translateY(0%);
+    }
 }
