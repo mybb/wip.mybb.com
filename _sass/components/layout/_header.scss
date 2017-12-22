@@ -51,6 +51,7 @@
             flex-wrap: wrap;
             background: $dark-background-2;
             margin: 0 -6%;
+            border-bottom: 1px solid $dark-border-3;
         }
 
         &__gap {
@@ -67,7 +68,6 @@
             transition: background $transition-speed ease;
 
             @include bp-medium-max {
-                // width: 30%;
                 width: 100%;
                 box-sizing: border-box;
                 text-align: left;
@@ -86,7 +86,6 @@
                 justify-content: center;
 
                 @include bp-medium-max {
-                    // height: auto;
                     text-align: left;
                     padding: 8px 20px;
                     font-size: $font-small;
