@@ -10,14 +10,25 @@ $(function() {
     // Header menu button
     $(".menu-button").click(function () {
         $(".main-menu").removeClass("main-menu--mobile-hide").addClass("main-menu--mobile-show");
+        $(".site-search").removeClass("site-search--mobile-hide").addClass("site-search--mobile-show");
         $(".menu-button").addClass("menu-button--hide");
         $(".menu-close-button").removeClass("menu-close-button--hide");
     });
 
     $(".menu-close-button").click(function () {
         $(".main-menu").removeClass("main-menu--mobile-show").addClass("main-menu--mobile-hide");
+        $(".site-search").removeClass("site-search--mobile-show").addClass("site-search--mobile-hide");
         $(".menu-button").removeClass("menu-button--hide");
         $(".menu-close-button").addClass("menu-close-button--hide");
+    });
+
+    $(".main-menu__links__item--search__icon").click(function () {
+        $(".site-search").addClass("site-search--show");
+        $(".site-search__field").focus();
+    });
+
+    $(".site-search__button--cancel").click(function () {
+        $(".site-search").removeClass("site-search--show");
     });
 
     // Feature tour menu button
