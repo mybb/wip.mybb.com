@@ -27,6 +27,14 @@
     }
 }
 
+@mixin icon-size($size) {
+
+    .icon svg {
+        width: $size;
+        height: $size;
+    }
+}
+
 @mixin icon-fill($color) {
 
     .icon svg * {
