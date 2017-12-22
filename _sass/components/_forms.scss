@@ -59,6 +59,7 @@
             margin: side-values(0 0 5px 0);
             padding: 0;
             font-size: 1em;
+            font-weight: bold;
         }
 
         &__description {
@@ -135,7 +136,7 @@
 
     &__submit {
         text-align: center;
-        padding: 10px 0;
+        padding: 10px 0 0 0;
 
         .button {
             font-size: 1em;
