@@ -33,5 +33,6 @@ sass:
 
 gems:
   - jekyll-redirect-from
+  - jekyll-remote-theme
 
 exclude: ["CNAME", "README.md", "CONTRIBUTING.md"]
