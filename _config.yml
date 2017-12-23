@@ -5,6 +5,8 @@ category-list: [features]
 permalink: pretty
 baseurl: /wip.mybb.com
 
+remote_theme: mybb/mybb.com-theme
+
 collections:
   features:
     output: true
