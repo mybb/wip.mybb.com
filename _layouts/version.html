@@ -203,9 +203,9 @@ section: download
                             <p class="security-issues__issue__reporter">
                                 Reported by
 
-                                {% assign reported_by = (issue.reported_by.name | markdownify | replace: '<p>', '' | replace: '</p>', '') %}
+                                {% assign reported_by = issue.reported_by.name | markdownify | replace: '<p>', '' | replace: '</p>', '' %}
                                 {% if issue.reported_by.affiliation %}
-                                    {% assign reported_by = reported_by | append: '<span class="security-issues__issue__reporter__affiliation">' | append: (issue.reported_by.affiliation | markdownify | replace: '<p>', '' | replace: '</p>', '') | append: '</span>' %}
+                                    {% assign reported_by = reported_by | append: '<span class="security-issues__issue__reporter__affiliation">' | append: issue.reported_by.affiliation | markdownify | replace: '<p>', '' | replace: '</p>', '' | append: '</span>' %}
                                 {% endif %}
                                 {{ reported_by }}
                             </p>
