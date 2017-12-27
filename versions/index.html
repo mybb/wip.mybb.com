@@ -41,7 +41,7 @@ description: Here you will find a description of the MyBB versioning scheme and 
                 <h1 class="block__heading__title">1.8.x series</h1>
             </header>
             <div class="version-list">
-                {% assign versions_sorted = (site.versions | sort: 'release_date') | reverse %}
+                {% assign versions_sorted = site.versions | sort: 'release_date' | reverse %}
                 {% assign counter = 1 %}
                 {% for version in versions_sorted %}
                     {% if version.version_number contains '1.8.' and version.release_date != '' %}

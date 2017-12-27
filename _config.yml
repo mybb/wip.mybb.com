@@ -5,6 +5,8 @@ category-list: [features]
 permalink: pretty
 baseurl: /wip.mybb.com
 
+remote_theme: mybb/mybb-website-theme
+
 collections:
   features:
     output: true
@@ -29,7 +31,8 @@ sass:
   sass_dir: _sass
   style: compressed
 
-gems:
+plugins:
   - jekyll-redirect-from
+  - jekyll-remote-theme
 
 exclude: ["CNAME", "README.md", "CONTRIBUTING.md"]

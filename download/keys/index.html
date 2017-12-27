@@ -27,7 +27,7 @@ redirect_from:
 			</tr>
 		</thead>
 		<tbody>
-			{% assign active_keys = (site.keys | where: "status", "active" | sort: 'add_date') | reverse %}
+			{% assign active_keys = site.keys | where: "status", "active" | sort: 'add_date' | reverse %}
 			{% if active_keys == empty %}
 				<tr>
 					<td colspan="4" style="text-align: center;">No active signing keys registered.</td>
@@ -60,7 +60,7 @@ redirect_from:
 			</tr>
 		</thead>
 		<tbody>
-			{% assign removed_keys = (site.keys | where: "status", "removed" | sort: 'remove_date') | reverse %}
+			{% assign removed_keys = site.keys | where: "status", "removed" | sort: 'remove_date' | reverse %}
 			{% if removed_keys == empty %}
 				<tr>
 					<td colspan="4" style="text-align: center;">No removed signing keys registered.</td>

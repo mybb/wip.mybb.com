@@ -14,7 +14,7 @@ meta_description: Accepted MyBB RFC documents and the Request For Comments proce
 	<section class="block">
 		<h1>Accepted RFC documents</h1>
 		<ul class="rfcs-list">
-			{% assign documents = (site.rfcs | sort: 'rfc_date') | reverse %}
+			{% assign documents = site.rfcs | sort: 'rfc_date' | reverse %}
 			{% for document in documents %}
 				{% assign rfc_title_words = document.relative_path | replace: "_rfcs/" | replace: ".md" | split: "-" %}
 				{% assign rfc_public_id = rfc_title_words[0] %}
