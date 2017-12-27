@@ -67,6 +67,11 @@ MyBB logs simple, daily counts of all of the threads, posts, and users on your f
 		<img src="{{ site.baseurl }}/assets/images/features/administration/forum-statistics.png" class="feature-tour__screenshot__image" />
 	</a>
 </div>
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/administration/forum-statistics2.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/administration/forum-statistics2.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>
 
 # Find plugins and themes without leaving the admin control panel
 With MyBB you can see a listing of the most popular [plugins](/features/plugins/) and [themes](/features/themes/) directly in your Admin CP. From there, you can also search for plugins and themes or browse the entire selection available on [MyBB Extend](https://community.mybb.com/mods.php).
