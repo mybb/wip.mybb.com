@@ -4,6 +4,7 @@ highlighter: rouge
 category-list: [features]
 permalink: pretty
 baseurl: /wip.mybb.com
+mainsiteurl: ""
 
 remote_theme: mybb/mybb-website-theme
 
