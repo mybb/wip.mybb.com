@@ -39,4 +39,4 @@ MyBB lets you easily edit every selector in a stylesheet, not just a predefined 
 	</a>
 </div>
 
-Additionally, MyBB offers an "Advanced Mode", which allows users who are more familiar with CSS to edit the stylesheet directly. You also can use the Advanced Mode to add new selectors, which you will then be able to edit using the simple editor.</p>
+Additionally, MyBB offers an "Advanced Mode", which allows users who are more familiar with CSS to edit the stylesheet directly. You also can use the Advanced Mode to add new selectors, which you will then be able to edit using the simple editor.
