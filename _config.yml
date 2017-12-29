@@ -4,7 +4,7 @@ highlighter: rouge
 category-list: [features]
 permalink: pretty
 baseurl: /wip.mybb.com
-mainsiteurl: ""
+mainsiteurl: "https://mybb.com"
 
 search_site: mybb.com
 search_field_placeholder: Search MyBB.com
