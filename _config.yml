@@ -6,6 +6,9 @@ permalink: pretty
 baseurl: /wip.mybb.com
 mainsiteurl: ""
 
+search_site: mybb.com
+search_field_placeholder: Search MyBB.com
+
 remote_theme: mybb/mybb-website-theme
 
 collections:
