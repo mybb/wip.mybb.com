@@ -1,0 +1,15 @@
+# Security contact email
+Contact: security@mybb.com
+# Contact MyBB Group via Private Inquiries forum
+Contact: https://community.mybb.com/forum-135.html
+
+# Use the mybb Keybase public key
+Encryption: https://keybase.io/mybb/pgp_keys.asc?fingerprint=639465c9290963024f17b90830d267d82746a304
+# When contacting an individual team member use their public key
+Encryption: {{ site.url }}/about/team/
+
+# Information on responsible disclosure
+Policy: {{ site.url }}/get-involved/security/
+
+# Security Hall Of Fame
+Acknowledgement: {{ site.url }}/get-involved/security/hall-of-fame/
