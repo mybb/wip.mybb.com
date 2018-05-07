@@ -11,13 +11,11 @@
 - name: "Design"
   code: "DES"
   color: "#657d08"
-  legacy_parent: "DEV"
   description: "The Design group is comprised of developers contributing to visual aspects of the software and its user experience practices."
 
 - name: "Security"
   code: "SEC"
   color: "#927878"
-  legacy_parent: "OPS"
   description: "The Security group includes members responsible for triage and response to vulnerability reports, secure development practices and cooperation with security researchers."
 
 - name: "Devops"
@@ -38,11 +36,9 @@
 - name: "Web"
   code: "WEB"
   color: "#2ba4eb"
-  legacy_parent: "OPS"
   description: "The Web group consists of members tasked with maintaining the Project's websites and forums."
 
 - name: "Editorial"
   code: "EDI"
   color: "#62c9a1"
-  legacy_parent: "COM"
   description: "The Editorial group members regularly contribute to the MyBB Blog and social media platforms."
